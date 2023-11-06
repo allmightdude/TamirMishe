@@ -305,9 +305,10 @@ body {
 }
 
 .btn {
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  color: #f6f6f6;
   cursor: pointer;
-  padding: 0;
-  overflow: hidden;
   white-space: nowrap;
   position: relative;
   text-align: center;
@@ -374,7 +375,7 @@ body {
   user-select: none;
 }
 .btn .btn--primary:not(.v-btn--outline) {
-  color: blue;
+  color: #fff;
   background-color: #f9ca24;
   box-shadow: 0 2px 4px 0 rgba(249, 202, 36, 0.6);
 }
@@ -383,101 +384,27 @@ body {
 }
 .btn .btn--primary.btn--outline {
   background-color: transparent;
-  color: red;
-  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.4);
+  color: #f9ca24;
+  box-shadow: inset 0 0 0 1px rgba(249, 202, 36, 0.4);
 }
 .btn .btn--primary.btn--outline:focus, .btn .btn--primary.btn--outline:hover {
-  background-color: rgba(255, 0, 0, 0.08);
+  background-color: rgba(249, 202, 36, 0.08);
 }
-
-.btn--primary:not(.v-btn--outline) {
-  color: blue;
-  background-color: #f9ca24;
-  box-shadow: 0 2px 4px 0 rgba(249, 202, 36, 0.6);
+.btn .btn--secnodary:not(.v-btn--outline) {
+  color: #fff;
+  background-color: #222f3e;
+  box-shadow: 0 2px 4px 0 rgba(34, 47, 62, 0.6);
 }
-.btn--primary:not(.v-btn--outline):focus, .btn--primary:not(.v-btn--outline):hover {
-  box-shadow: 0 3px 8px 0 rgba(249, 202, 36, 0.6);
+.btn .btn--secnodary:not(.v-btn--outline):focus, .btn .btn--secnodary:not(.v-btn--outline):hover {
+  box-shadow: 0 3px 8px 0 rgba(34, 47, 62, 0.6);
 }
-.btn--primary.btn--outline {
+.btn .btn--secnodary.btn--outline {
   background-color: transparent;
-  color: red;
-  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.4);
+  color: #3f4b58;
+  box-shadow: inset 0 0 0 1px rgba(63, 75, 88, 0.4);
 }
-.btn--primary.btn--outline:focus, .btn--primary.btn--outline:hover {
-  background-color: rgba(255, 0, 0, 0.08);
-}
-
-.btn-submit {
-  float: left;
-  font-size: 1.2rem;
-  font-weight: 100;
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-.btn-contact {
-  display: inline-block;
-}
-
-.btn-toTop {
-  color: white;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #efefef;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-  cursor: pointer;
-  transition: 0.3s all ease;
-}
-.btn-toTop:hover {
-  border: 1px solid #f9ca24;
-}
-
-.popuop-flash {
-  position: fixed;
-  padding: 1rem 3rem;
-  border-radius: 4px;
-  color: white;
-  right: 1rem;
-  top: 2rem;
-  max-width: 30rem;
-  font-size: 1.3rem;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.095);
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s all ease;
-}
-.popuop-flash.active {
-  visibility: visible;
-  opacity: 1;
-}
-.popuop-flash.danger {
-  background-color: #eb2f06;
-}
-.popuop-flash.success {
-  background-color: #78e08f;
-}
-
-.loader-form {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  z-index: 1000000;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-.loader-form img {
-  width: 5rem;
-  height: 5rem;
+.btn .btn--secnodary.btn--outline:focus, .btn .btn--secnodary.btn--outline:hover {
+  background-color: rgba(63, 75, 88, 0.08);
 }
 
 .ctPanel {
