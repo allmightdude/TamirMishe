@@ -1,3 +1,17 @@
+/**
+ * Breakpoints
+ * *********************************/
+/**
+   * Container
+   * *********************************/
+/**
+ * Responsive breakpoint
+ * *********************************/
+/* Desktop First */
+/* Mobile First */
+/* Between */
+/* Mobile point */
+/* Custom size */
 *,
 ::before,
 ::after {
@@ -305,9 +319,10 @@ body {
 }
 
 .btn {
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  color: #f6f6f6;
   cursor: pointer;
-  padding: 0;
-  overflow: hidden;
   white-space: nowrap;
   position: relative;
   text-align: center;
@@ -373,111 +388,37 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-.btn .btn--primary:not(.v-btn--outline) {
-  color: blue;
+.btn.btn--primary:not(.btn--outline) {
+  color: #fff;
   background-color: #f9ca24;
   box-shadow: 0 2px 4px 0 rgba(249, 202, 36, 0.6);
 }
-.btn .btn--primary:not(.v-btn--outline):focus, .btn .btn--primary:not(.v-btn--outline):hover {
+.btn.btn--primary:not(.btn--outline):focus, .btn.btn--primary:not(.btn--outline):hover {
   box-shadow: 0 3px 8px 0 rgba(249, 202, 36, 0.6);
 }
-.btn .btn--primary.btn--outline {
+.btn.btn--primary.btn--outline {
   background-color: transparent;
-  color: red;
-  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.4);
+  color: #f9ca24;
+  box-shadow: inset 0 0 0 1px rgba(249, 202, 36, 0.4);
 }
-.btn .btn--primary.btn--outline:focus, .btn .btn--primary.btn--outline:hover {
-  background-color: rgba(255, 0, 0, 0.08);
+.btn.btn--primary.btn--outline:focus, .btn.btn--primary.btn--outline:hover {
+  background-color: rgba(249, 202, 36, 0.08);
 }
-
-.btn--primary:not(.v-btn--outline) {
-  color: blue;
-  background-color: #f9ca24;
-  box-shadow: 0 2px 4px 0 rgba(249, 202, 36, 0.6);
+.btn.btn--secnodary:not(.btn--outline) {
+  color: #fff;
+  background-color: #222f3e;
+  box-shadow: 0 2px 4px 0 rgba(34, 47, 62, 0.6);
 }
-.btn--primary:not(.v-btn--outline):focus, .btn--primary:not(.v-btn--outline):hover {
-  box-shadow: 0 3px 8px 0 rgba(249, 202, 36, 0.6);
+.btn.btn--secnodary:not(.btn--outline):focus, .btn.btn--secnodary:not(.btn--outline):hover {
+  box-shadow: 0 3px 8px 0 rgba(34, 47, 62, 0.6);
 }
-.btn--primary.btn--outline {
+.btn.btn--secnodary.btn--outline {
   background-color: transparent;
-  color: red;
-  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.4);
+  color: #3f4b58;
+  box-shadow: inset 0 0 0 1px rgba(63, 75, 88, 0.4);
 }
-.btn--primary.btn--outline:focus, .btn--primary.btn--outline:hover {
-  background-color: rgba(255, 0, 0, 0.08);
-}
-
-.btn-submit {
-  float: left;
-  font-size: 1.2rem;
-  font-weight: 100;
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-.btn-contact {
-  display: inline-block;
-}
-
-.btn-toTop {
-  color: white;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #efefef;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-  cursor: pointer;
-  transition: 0.3s all ease;
-}
-.btn-toTop:hover {
-  border: 1px solid #f9ca24;
-}
-
-.popuop-flash {
-  position: fixed;
-  padding: 1rem 3rem;
-  border-radius: 4px;
-  color: white;
-  right: 1rem;
-  top: 2rem;
-  max-width: 30rem;
-  font-size: 1.3rem;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.095);
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s all ease;
-}
-.popuop-flash.active {
-  visibility: visible;
-  opacity: 1;
-}
-.popuop-flash.danger {
-  background-color: #eb2f06;
-}
-.popuop-flash.success {
-  background-color: #78e08f;
-}
-
-.loader-form {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  z-index: 1000000;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-.loader-form img {
-  width: 5rem;
-  height: 5rem;
+.btn.btn--secnodary.btn--outline:focus, .btn.btn--secnodary.btn--outline:hover {
+  background-color: rgba(63, 75, 88, 0.08);
 }
 
 .ctPanel {
@@ -513,7 +454,7 @@ body {
   border-radius: 4px;
 }
 .form__input:focus {
-  outline: 1px solid #3f4b58;
+  outline: 1px solid rgba(63, 75, 88, 0.3);
 }
 .form__textarea {
   width: 100%;
@@ -525,7 +466,7 @@ body {
   font-size: 1.4rem;
 }
 .form__textarea:focus {
-  outline: 1px solid #f9ca24;
+  outline: 1px solid rgba(63, 75, 88, 0.3);
 }
 
 .block {
@@ -991,6 +932,7 @@ body {
 .article__header {
   padding: 1rem 3rem;
 }
+
 .articles {
   display: flex;
   gap: 1rem;
@@ -1025,7 +967,8 @@ body {
   margin-bottom: 3rem;
 }
 
-html, body {
+html,
+body {
   transition: 1.5s all ease;
 }
 
@@ -1051,7 +994,7 @@ html, body {
 }
 .sidenav__menu-item {
   padding: 1rem 0;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
   cursor: pointer;
 }
 .sidenav__menu-item svg {
@@ -1082,7 +1025,7 @@ html, body {
 .sidenav__submenu {
   margin-top: 1rem;
   margin-right: 1rem;
-  border-right: 1px solid #DEDEDE;
+  border-right: 1px solid #dedede;
   padding-right: 0.5rem;
   transition: 0.3s all ease;
   display: none;
@@ -1143,9 +1086,9 @@ aside {
   object-fit: cover;
 }
 .article-main__additional {
-  border-bottom: 1px solid #F6F6F6;
+  border-bottom: 1px solid #f6f6f6;
   font-size: 1.3rem;
-  color: #AFAFAF;
+  color: #afafaf;
   padding-bottom: 1rem;
 }
 .article-main p {
@@ -1209,7 +1152,7 @@ aside {
   font-weight: 600;
 }
 .article-main__ad {
-  background-color: #DCDDE1;
+  background-color: #dcdde1;
   padding: 1.5rem 3rem;
   border-radius: 4px;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.095);
@@ -1222,7 +1165,7 @@ aside {
   margin-left: 0.5rem;
 }
 .article-main-list--sub {
-  color: #8B8B8B;
+  color: #8b8b8b;
   font-size: 1.4rem;
 }
 .article-main .circled {
@@ -1236,7 +1179,7 @@ aside {
 }
 .article-main__tags-item {
   font-size: 1.2rem;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
   color: #b2bec3;
   padding: 0.2rem;
@@ -1247,7 +1190,7 @@ aside {
 }
 .subject-related a {
   font-size: 1.3rem;
-  color: #0097E6;
+  color: #0097e6;
 }
 
 .aside .reviewPannel {
@@ -1281,7 +1224,7 @@ aside {
 }
 .aside .infoPannel__item {
   padding: 0.5rem 0;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
 }
 .aside .infoPannel__link {
   color: #222f3e;
@@ -1408,7 +1351,7 @@ aside {
 }
 .home-about .btn-contact {
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.233);
-  background-image: linear-gradient(to right bottom, #f9ca24, #F8D55D);
+  background-image: linear-gradient(to right bottom, #f9ca24, #f8d55d);
 }
 
 @media only screen and (max-width: 50em) {
