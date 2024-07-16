@@ -1,0 +1,10 @@
+/* Mobile point */
+// $mobile: $sm-down;
+// $desktop: $sm-up;
+
+/* Custom size */
+$size: "";
+
+@mixin point($value) {
+  $size: "only screen and (max-width: #{$value})" !global;
+}

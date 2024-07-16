@@ -1,0 +1,50 @@
+.advantage {
+  &__item {
+    margin-top: 3rem;
+
+    @include max-width(sm) {
+      text-align: center;
+      box-shadow: $depth-1;
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+
+    @include radius(4px);
+
+    &-title {
+      padding: 0 1rem;
+
+      @include max-width(sm) {
+        border: none;
+      }
+    }
+
+    &-text {
+      margin-right: 1rem;
+    }
+  }
+
+  &__icon {
+    background-color: red;
+  }
+
+  &__link {
+    color: color("secondary", "base");
+    margin-right: 2rem;
+  }
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .receipt-icon,
+  .hq-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__img {
+    background-color: red;
+  }
+}

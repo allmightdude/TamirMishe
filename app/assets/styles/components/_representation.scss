@@ -1,0 +1,23 @@
+.representation {
+  &__item {
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    box-shadow: $depth-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .heading-2{
+    position: relative;
+    z-index: 100;
+  }
+}

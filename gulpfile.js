@@ -9,16 +9,16 @@ function serve(){
             baseDir : "./app"
         }
     })
-    watch(['./app/scss/**/*.scss'] , scss)
-    watch('./app/css/*.css').on('change' , browserSync.reload)
-    watch('./app/js/*.js').on('change' , browserSync.reload)
+    watch(['./app/assets/styles/**/*.scss'] , scss)
+    watch('./app/assets/styles/*.css').on('change' , browserSync.reload)
+    watch('./app/assets/scripts/*.js').on('change' , browserSync.reload)
     watch("./app/**/*.html").on('change', browserSync.reload)
 }
 
 function scss(done){
-    src('./app/scss/**/*.scss')
+    src('./app/assets/styles/**/*.scss')
     .pipe(sass().on('error' , sass.logError))
-    .pipe(dest('./app/css/'))
+    .pipe(dest('./app/assets/css'))
     done();
 }
 
