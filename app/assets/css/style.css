@@ -49,6 +49,9 @@
         * Flex Shorthand
         * *********************************/
 /**
+        * Flex Gaps
+        * *********************************/
+/**
     * Container
     * *********************************/
 /**** Init Colors *********
@@ -1991,6 +1994,206 @@ body {
     justify-content: right;
   }
 }
+.gap5 {
+  gap: 5px !important;
+}
+
+.gap5 {
+  gap: 5px !important;
+}
+
+.gap5 {
+  gap: 5px !important;
+}
+
+.gap5 {
+  gap: 5px !important;
+}
+
+.gap5 {
+  gap: 5px !important;
+}
+
+.gap10 {
+  gap: 10px !important;
+}
+
+.gap10 {
+  gap: 10px !important;
+}
+
+.gap10 {
+  gap: 10px !important;
+}
+
+.gap10 {
+  gap: 10px !important;
+}
+
+.gap10 {
+  gap: 10px !important;
+}
+
+.gap15 {
+  gap: 15px !important;
+}
+
+.gap15 {
+  gap: 15px !important;
+}
+
+.gap15 {
+  gap: 15px !important;
+}
+
+.gap15 {
+  gap: 15px !important;
+}
+
+.gap15 {
+  gap: 15px !important;
+}
+
+.gap20 {
+  gap: 20px !important;
+}
+
+.gap20 {
+  gap: 20px !important;
+}
+
+.gap20 {
+  gap: 20px !important;
+}
+
+.gap20 {
+  gap: 20px !important;
+}
+
+.gap20 {
+  gap: 20px !important;
+}
+
+.gap25 {
+  gap: 25px !important;
+}
+
+.gap25 {
+  gap: 25px !important;
+}
+
+.gap25 {
+  gap: 25px !important;
+}
+
+.gap25 {
+  gap: 25px !important;
+}
+
+.gap25 {
+  gap: 25px !important;
+}
+
+.gap30 {
+  gap: 30px !important;
+}
+
+.gap30 {
+  gap: 30px !important;
+}
+
+.gap30 {
+  gap: 30px !important;
+}
+
+.gap30 {
+  gap: 30px !important;
+}
+
+.gap30 {
+  gap: 30px !important;
+}
+
+.gap35 {
+  gap: 35px !important;
+}
+
+.gap35 {
+  gap: 35px !important;
+}
+
+.gap35 {
+  gap: 35px !important;
+}
+
+.gap35 {
+  gap: 35px !important;
+}
+
+.gap35 {
+  gap: 35px !important;
+}
+
+.gap40 {
+  gap: 40px !important;
+}
+
+.gap40 {
+  gap: 40px !important;
+}
+
+.gap40 {
+  gap: 40px !important;
+}
+
+.gap40 {
+  gap: 40px !important;
+}
+
+.gap40 {
+  gap: 40px !important;
+}
+
+.gap45 {
+  gap: 45px !important;
+}
+
+.gap45 {
+  gap: 45px !important;
+}
+
+.gap45 {
+  gap: 45px !important;
+}
+
+.gap45 {
+  gap: 45px !important;
+}
+
+.gap45 {
+  gap: 45px !important;
+}
+
+.gap50 {
+  gap: 50px !important;
+}
+
+.gap50 {
+  gap: 50px !important;
+}
+
+.gap50 {
+  gap: 50px !important;
+}
+
+.gap50 {
+  gap: 50px !important;
+}
+
+.gap50 {
+  gap: 50px !important;
+}
+
 .mt10 {
   margin-top: 10px !important;
 }
@@ -2475,6 +2678,22 @@ body {
 }
 .btn.btn--secnodary.btn--outline:focus, .btn.btn--secnodary.btn--outline:hover {
   background-color: rgba(78, 90, 103, 0.08);
+}
+.btn.btn--info:not(.btn--outline) {
+  color: #4ebdda;
+  background-color: #4ebdda;
+  box-shadow: 0 2px 4px 0 rgba(78, 189, 218, 0.3);
+}
+.btn.btn--info:not(.btn--outline):focus, .btn.btn--info:not(.btn--outline):hover {
+  box-shadow: 0 3px 8px 0 rgba(78, 189, 218, 0.3);
+}
+.btn.btn--info.btn--outline {
+  background-color: rgba(255, 255, 255, 0);
+  color: #4ebdda;
+  box-shadow: inset 0 0 0 1px rgba(78, 189, 218, 0.3);
+}
+.btn.btn--info.btn--outline:focus, .btn.btn--info.btn--outline:hover {
+  background-color: rgba(78, 189, 218, 0.08);
 }
 
 .faq__item {
@@ -3743,8 +3962,8 @@ aside {
 
 .menu-icon {
   position: absolute;
-  top: 50%;
-  transform: translateY(-80%);
+  top: 2.8rem;
+  right: 1rem;
   display: none;
 }
 @media only screen and (max-width: 37.5em) {
@@ -3760,7 +3979,7 @@ aside {
 
 .close-icon {
   position: absolute;
-  left: 2rem;
+  left: 4rem;
   cursor: pointer;
 }
 .close-icon svg {
@@ -3783,6 +4002,7 @@ aside {
 }
 .nav__bottom {
   background-color: #f6f6f6;
+  position: relative;
 }
 .nav__menu {
   display: flex;
@@ -3968,4 +4188,5 @@ aside {
   background-size: cover;
   background-position: center;
   padding-top: 3rem;
+  background-attachment: fixed;
 }

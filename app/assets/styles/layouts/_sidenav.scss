@@ -84,8 +84,8 @@
 
 .menu-icon {
   position: absolute;
-  top: 50%;
-  transform: translateY(-80%);
+  top: 2.8rem;
+  right: 1rem;
   display: none;
 
   @media only screen and (max-width : $bp-medium) {
@@ -101,7 +101,7 @@
 
 .close-icon {
   position: absolute;
-  left: 2rem;
+  left: 4rem;
   cursor: pointer;
 
   svg {

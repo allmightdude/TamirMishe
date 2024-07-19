@@ -1,7 +1,6 @@
 /**
     * Flex
     * *********************************/
-
 @mixin make-flex($size: map-get($breakpoints, xl)) {
   @if (map-has-key($breakpoints, $size)) {
     .d-#{$size}-flex {
@@ -203,6 +202,25 @@ $items: grow, shrink;
           flex: #{$i} #{$j} 100%;
         }
       }
+    }
+  }
+}
+
+/**
+        * Flex Gaps
+        * *********************************/
+@mixin gap-maker($size: 50, $raise: 5) {
+  @for $i from 1 through calc($size / $raise) {
+    $value: $i * $raise;
+
+    @each $direction in $paddingDirections {
+      .gap#{$value} {
+        gap: #{$value}px !important;
+      }
+    }
+
+    .gap#{$value} {
+      gap: #{$value}px !important;
     }
   }
 }

@@ -81,4 +81,11 @@
     color("secondary", "lighten-1"),
     color("white", "base"),
   );
+
+  @include btn-maker(
+    info,
+    color("alts", "blue"),
+    color("alts", "blue"),
+    color("alts", "blue"),
+  );
 }
