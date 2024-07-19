@@ -90,8 +90,26 @@
   }
 }
 
-
-input::placeholder{
+input::placeholder {
   font-size: 1.3rem;
   opacity: 0.8;
+  pointer-events: none;
+}
+
+.textarea {
+  &__field {
+    height: auto;
+  }
+
+  &__input {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    line-height: 26px;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

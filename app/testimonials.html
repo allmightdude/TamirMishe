@@ -12,10 +12,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>مرکز تخصصی تعمیرات ماشین لباسشویی</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
         integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -188,12 +184,12 @@
         <div class="sidenav__footer-item">
             <span>شماره تماس</span>
             <div class="contact-numbers">
-                <a class="btn bg-black mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
-                <a class="btn bg-black mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
+                <a class="btn bg-secondary mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
+                <a class="btn bg-secondary mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
             </div>
         </div>
 
-        <div class="sidenav__footer-item mt-2">
+        <div class="sidenav__footer-item  ">
             <div class="email d-flex ai-c">
                 <span>ایمیل : </span>
                 <p> anitamir@yahoo.com </p>
@@ -220,7 +216,7 @@
             ما بشنوید! برخی از بررسی های زیر را بررسی کنید تا درباره نحوه کار با تیم حرفه ای تعمیر ماشین لیاسشویی ما
             بیشتر بدانید. اگر قبلاً با ما کار کرده‌اید، مااز شما را درخواست می کنیم که نظر خود را بنویسید!</h3>
 
-        <div class="col-12 review__creator mt-2">
+        <div class="col-12 review__creator  ">
             <div class="col-12 text-center">
                 <div class="review__button">
                     <svg class="heart-icon">
@@ -248,7 +244,7 @@
                     </h3>
                     <p>تجربه ی خود را به اشتراک بگذارید</p>
 
-                    <div class="reviewPannel__stars mt-2">
+                    <div class="reviewPannel__stars  ">
                         <svg class="star-o-icon" value="1">
                             <use xlink:href="images/sprite.svg#icon-star_outline"></use>
                         </svg>
@@ -286,11 +282,11 @@
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="row   ">
             <div class="col-12" id="app">
                 <div class="col-3" v-for="(review , index) in reviews" :key="review.index">
                     <!--
-                                        <div class="reviewPannel__stars mt-2">
+                                        <div class="reviewPannel__stars  ">
                                             <svg class="star-icon">
                                                 <use xlink:href="images/sprite.svg#icon-star1"></use>
                                             </svg>
@@ -313,10 +309,10 @@
 
                     <div class="review__item">
                         <div class="level">
-                            <div class="block pd-1 mt-1 bg-black">
+                            <div class="block pd-1 mt-1 bg-secondary">
                                 <div class="block__content text-center">
                                     <!--                                             
-                                            <div class="reviewPannel__stars mt-2">
+                                            <div class="reviewPannel__stars  ">
                                                 <svg class="star-icon">
                                                     <use xlink:href="images/sprite.svg#icon-star1"></use>
                                                 </svg>
@@ -334,7 +330,7 @@
                                                 </svg>
                                                 
                                             </div> -->
-                                    <div class="reviewPannel__stars mt-2">
+                                    <div class="reviewPannel__stars  ">
                                         <span v-for="star in review.stars">
                                             <svg class="star-icon" v-if="star <= review.stars">
                                                 <use xlink:href="images/sprite.svg#icon-star1"></use>
@@ -348,7 +344,7 @@
                                         {{review.description}}
                                     </p>
 
-                                    <div class="review__location mt-2">
+                                    <div class="review__location  ">
                                         {{review.location}}
                                     </div>
 
@@ -372,7 +368,7 @@
     <img src="images/loader.gif" alt="">
 </div>
 
-<section class="section footer bg-black">
+<section class="section footer bg-secondary">
 
     <div class="container">
         <a class="btn-toTop">
@@ -392,7 +388,7 @@
                     <p>با ما تماس بگیرید:
                     </p>
 
-                    <a href="" class="btn bg-orange btn-contact mt-3">۰۹۳۶۹۲۳۶۴۲۰
+                    <a href="" class="btn bg-orange btn-contact   ">۰۹۳۶۹۲۳۶۴۲۰
                     </a>
                 </div>
 
@@ -460,9 +456,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 

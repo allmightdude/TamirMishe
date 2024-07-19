@@ -1,7 +1,7 @@
 .btn {
   border-radius: 4px;
   padding: 0.5rem 2rem;
-  color:color("white" , "darken-1");
+  color: color("white", "darken-1");
   cursor: pointer;
   white-space: nowrap;
   position: relative;
@@ -12,6 +12,10 @@
   transition: opacity 0.3s, background-color 0.3s, filter 0.3s, 0.3s box-shadow;
   @include radius(4px);
   @include no-select;
+
+  &--inline{
+    display: inline;
+  }
 
   + .btn {
     margin-top: 5px;
@@ -70,5 +74,11 @@
     color("primary", "base"),
     #fff
   );
-  @include btn-maker(secnodary, color("secondary" , "base"), color("primary" , "lighten-1"), #fff);
+
+  @include btn-maker(
+    secnodary,
+    color("secondary", "base"),
+    color("secondary", "lighten-1"),
+    color("white", "base"),
+  );
 }

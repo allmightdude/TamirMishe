@@ -38,6 +38,14 @@
   color: color("primary", "base");
 }
 
-.fg-secondary {
+.bg-secondary {
   color: color("secondary", "lighten-1");
+}
+
+.bg-secondary {
+  color: color("secondary", "lighten-1");
+}
+
+.text-light {
+  color: color("secondary", "lighten-3");
 }

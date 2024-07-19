@@ -1,12 +1,12 @@
 .reviewPannel {
-  padding: 15rem 10rem;
-
-  @include max-width(sm) {
-    padding: 10rem 5rem;
-  }
+  background-color: color('secondary' , 'base');
 }
+
 .review__item {
   color: white;
+  margin: 15px;
+  padding: 10px 25;
+
   svg {
     width: 2rem;
     height: 2rem;
@@ -82,11 +82,4 @@
   transition: 0.3s all;
   height: auto;
   transition: transform 1s;
-
-  // &.hide{
-  //     transform: translateY(-100%);
-  //     height: 0;
-  //     opacity: 0;
-  //     visibility: hidden;
-  // }
 }

@@ -1,0 +1,9 @@
+.contact-us {
+  &__header {
+    background-image:  linear-gradient(to right, rgba(color('primary' , 'lighten-1') , .1) 0%, rgba(color('primary' , 'base') , 0.5) 80%), url(/static/images/contact-us.jpg);
+    min-height: 40rem;
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem;
+  }
+}

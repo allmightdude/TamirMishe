@@ -1,39 +1,45 @@
 @include make-justify();
 @include make-justify(xl);
 
-@media only screen and (max-width: "1200px") {
+@include max-width(lg) {
   @include make-justify(lg);
 }
 
-@media only screen and (max-width: "992px") {
+@include max-width(md) {
   @include make-justify(md);
 }
 
-@media only screen and (max-width: "768px") {
+@include max-width(sm) {
   @include make-justify(sm);
 }
 
-@media only screen and (max-width: "480px") {
+@include max-width(xs) {
   @include make-justify(xs);
 }
 
+
 // Make Align Items
 @include make-align();
-@include make-align(xl);
 
-@media only screen and (max-width: "1200px") {
+@include max-width(xl) {
+  @include make-align(xl);
+}
+
+@include max-width(lg) {
   @include make-align(lg);
 }
 
-@media only screen and (max-width: "992px") {
+
+@include max-width(lg) {
   @include make-align(md);
 }
 
-@media only screen and (max-width: "768px") {
+
+@include max-width(lg) {
   @include make-align(sm);
 }
 
-@media only screen and (max-width: "480px") {
+@include max-width(lg) {
   @include make-align(xs);
 }
 

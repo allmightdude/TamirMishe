@@ -117,7 +117,7 @@ input::-ms-reveal {
 input {
   border: none;
 
-  &:focus{
+  &:focus {
     border: none;
     outline: none;
   }
@@ -148,8 +148,4 @@ a:active {
 a {
   cursor: pointer;
   color: inherit;
-}
-
-::selection{
-  @include selection(color('primary' , 'base') , color('white' , 'base'))
 }

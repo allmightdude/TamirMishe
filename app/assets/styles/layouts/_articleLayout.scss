@@ -1,6 +1,6 @@
 main,
 aside {
-  padding: 2rem 1rem;
+  padding: 1rem 0;
 }
 
 .article-main {
@@ -18,6 +18,7 @@ aside {
       object-fit: cover;
     }
   }
+
   &__additional {
     border-bottom: 1px solid #f6f6f6;
     font-size: 1.3rem;
@@ -26,15 +27,13 @@ aside {
   }
 
   p {
-    margin-top: 2rem;
-
     @media only screen and (max-width: $bp-medium) {
       text-align: justify;
     }
   }
 
   &__link {
-    color: color("primary" , "base");
+    color: color("primary", "base");
   }
 
   &__wrap {
@@ -60,9 +59,8 @@ aside {
     }
 
     p {
-      margin: 0;
-      padding: 2rem 0;
       position: relative;
+      line-height: 2.8 !important;
 
       &.lined::before,
       &.lined::after {
@@ -70,7 +68,7 @@ aside {
         content: "";
         width: 100%;
         height: 1px;
-        background-color: color("primary" , "base");
+        background-color: color("primary", "base");
       }
 
       &.lined::after {
@@ -90,7 +88,6 @@ aside {
   }
 
   h3 {
-    margin-top: 3rem;
     font-weight: 600;
   }
 
@@ -99,15 +96,11 @@ aside {
     padding: 1.5rem 3rem;
     border-radius: 4px;
     box-shadow: $depth-1;
-    margin: 2rem 0;
-  }
-
-  &-list {
   }
 
   &-list--item {
-    // display: flex;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-top:.5rem;
 
     svg {
       margin-left: 0.5rem;
@@ -127,7 +120,6 @@ aside {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1rem;
   }
 
   &__tags-item {
@@ -148,81 +140,24 @@ aside {
   }
 }
 
-.aside {
-  .reviewPannel {
-    padding: 11rem 5rem;
-    color: white;
+// .aside {
+//   .reviewPannel {
+//     padding: 11rem 5rem;
+//     color: white;
+//     font-size: 1.3rem;
+//   }
+// }
+
+.infoPannel {
+  padding: 3 2rem;
+
+  &__item {
+    padding: 0.5rem 0;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  &__link {
+    color: color("secondary", "lighten-3");
     font-size: 1.3rem;
-  }
-
-  .owl-stage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .owl-stage-outer {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .owl-nav {
-    .owl-next,
-    .owl-prev {
-      color: white;
-      font-size: 3rem;
-      background-color: transparent;
-      outline: none;
-      border: none;
-    }
-
-    .owl-prev {
-      margin-left: 3rem;
-    }
-  }
-
-  .infoPannel {
-    padding: 5rem 4rem;
-
-    &__item {
-      padding: 0.5rem 0;
-      border-top: 1px solid #e6e6e6;
-    }
-
-    &__link {
-      color: color("secondary" , "base");
-      font-size: 1.3rem;
-    }
-  }
-}
-
-.wrapper {
-  position: relative;
-
-  .owl-nav {
-    position: absolute;
-    width: 10rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .owl-next,
-  .owl-prev {
-    color: white;
-    font-size: 3rem;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: color("primary" , "base");
-  }
-
-  .owl-next {
-    position: absolute;
-    left: 0;
-  }
-  .owl-prev {
-    position: absolute;
-    right: 0;
   }
 }

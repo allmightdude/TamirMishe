@@ -49,6 +49,8 @@
 @import "components/row";
 @import "components/col";
 @import "components/card";
+@import "components/divider";
+@import "components/alert";
 
 // Layouts
 @import "layouts/article";
@@ -59,3 +61,4 @@
 
 // pages
 @import "pages/home";
+@import "pages/contact";
