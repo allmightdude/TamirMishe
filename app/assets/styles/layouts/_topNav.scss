@@ -57,7 +57,19 @@
   }
 
   &__link {
+    position: relative;
     color: color("secondary", "base");
+  }
+  
+  &__link--submenu {
+    background-color: red;
+    position: absolute;
+    padding: 0.5rem 1rem;
+    min-width: 12rem;
+    background-color: color('white' , 'base');
+    border-radius: 4px;
+    box-shadow: 0 1px 0.5rem rgba(#000 , 0.1);
+    margin-top: 10px;
   }
 
   &__logo {

@@ -143,6 +143,4 @@ async function sendReview(e) {
     popup.style.opacity = 0;
     popup.style.visibility = "hidden";
   }, 3000);
-
-  console.log(result.data);
 }

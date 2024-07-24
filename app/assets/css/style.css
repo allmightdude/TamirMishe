@@ -3718,6 +3718,7 @@ Alert
   height: 100%;
   z-index: 2000;
   backdrop-filter: blur(5px);
+  display: none;
 }
 .loader__light {
   position: absolute;
@@ -4158,7 +4159,18 @@ aside {
   visibility: visible;
 }
 .nav__link {
+  position: relative;
   color: #3f4b58;
+}
+.nav__link--submenu {
+  background-color: red;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  min-width: 12rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 .nav__logo {
   width: 6rem;
