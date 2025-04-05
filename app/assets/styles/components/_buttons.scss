@@ -1,0 +1,91 @@
+.btn {
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  color: color("white", "darken-1");
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  transition: opacity 0.3s, background-color 0.3s, filter 0.3s, 0.3s box-shadow;
+  @include radius(4px);
+  @include no-select;
+
+  &--inline{
+    display: inline;
+  }
+
+  + .btn {
+    margin-top: 5px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &--small {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    min-width: 70px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    min-width: 100px;
+  }
+
+  &--block {
+    margin-top: 0;
+    display: block;
+    width: 100%;
+  }
+
+  &--large {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    min-width: 120px;
+  }
+
+  &--disable {
+    pointer-events: none;
+    color: #b2b2b2 !important;
+    background-color: #dcdcdc !important;
+    box-shadow: none !important;
+  }
+
+  &--freeze {
+    cursor: not-allowed;
+    @include no-select;
+  }
+
+  @include btn-maker(
+    primary,
+    color("primary", "base"),
+    color("primary", "base"),
+    #fff
+  );
+
+  @include btn-maker(
+    secnodary,
+    color("secondary", "base"),
+    color("secondary", "lighten-1"),
+    color("white", "base"),
+  );
+
+  @include btn-maker(
+    info,
+    color("alts", "blue"),
+    color("alts", "blue"),
+    color("alts", "blue"),
+  );
+}

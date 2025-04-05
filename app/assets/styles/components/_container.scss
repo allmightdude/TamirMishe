@@ -1,0 +1,31 @@
+.container {
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  max-width: $container-width-xl;
+
+  @include max-width(lg) {
+    max-width: $container-width-lg;
+  }
+
+  @include max-width(md) {
+    max-width: $container-width-md;
+  }
+
+  @include max-width(sm) {
+    max-width: $container-width-sm;
+  }
+
+  &--medium {
+    max-width: 840px;
+  }
+
+  &--small {
+    max-width: 680px;
+  }
+
+  &--fluid {
+    max-width: none;
+  }
+}

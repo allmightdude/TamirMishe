@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description"
+    <meta e="description"
         content="تعمیر لباسشویی در محل-ما لباسشویی شما را در منزل خودتان در کمترین زمان تعمیر می کنیم-سریع ترین و با کیفیت ترین خدمات را از ما بخواهید-آنی تعمیر مرکز تخصصی تعمیرات ماشین لباسشویی">
     <meta name="robots" content="NOINDEX,FOLLOW">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
@@ -12,395 +12,493 @@
     <meta name="viewport" content="width=device-width" />
     <title>مرکز تخصصی تعمیرات ماشین لباسشویی</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link href="image/icons/AniTamir1.png" rel="shortcut icon" />
+
+    <link rel="stylesheet" href="assets//css/style.css">
 
 </head>
 
 <body>
-</body>
+    <!------------------start preloader-------------------->
+    <div class="loader">
+        <div class="landry">
+            <div class="buttons-wash">
+                <div class="empty"></div>
 
-<div class="nav">
-    <div class="nav__top">
-        <div class="container">
-            <div class="row">
-                <div class="nav__top-numbers">
-                    <span>۰۹۳۶۹۲۳۶۴۲۰</span>
-                    <span>۰۹۳۶۹۲۳۶۴۲۰</span>
-                </div>
+                <div class="circle-button"></div>
 
-                <div class="nav__top-socials">
-                    <div class="social d-flex">
-                        <div class="social__item">
-                            <svg class="instagram-icon">
-                                <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="social__item mr-1">
-                            <svg class="instagram-icon">
-                                <use xlink:href="images/sprite.svg#icon-paper-plane"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+                <div class="circle-button"></div>
+            </div>
+
+            <div class="loader__light mt40">
+                <div class="loader__light-line"></div>
+                <div class="loader__light-line"></div>
+                <div class="loader__light-line"></div>
+            </div>
+
+            <div class="door">
+                <svg class="labSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                    <defs>
+                        <linearGradient id="frontGrad" gradientUnits="userSpaceOnUse" x1="300" y1="100" x2="300"
+                            y2="600">
+                            <stop offset="0.5" style="stop-color:#005DE9" />
+                            <stop offset="0.8" style="stop-color:#0ca4ff" />
+                        </linearGradient>
+                        <mask id="liquidMask">
+                            <path class="liquidMask" fill="#0ca4ff" d="M337,273.9V129h-74v144.8c-37,14.7-63.1,50.8-63.1,93c0,55.2,44.8,100,100,100
+                         s100-44.8,100-100C400,324.7,373.9,288.6,337,273.9z" />
+                        </mask>
+                        <clipPath id="sphereMask">
+                            <circle fill="#0ca4ff" stroke="none" stroke-width="0.4957" stroke-miterlimit="10" cx="300"
+                                cy="367" r="100" />
+                        </clipPath>
+                        <filter id="goo" color-interpolation-filters="sRGB">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="7 7" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -7"
+                                result="cm" />
+
+                            <feComposite in="SourceGraphic" in2="cm" />
+                        </filter>
+                    </defs>
+                    <g class="liquidMaskGroup" clip-path="url(#sphereMask)">
+                        <path class="liquidBack" fill="#0063d8" d="M1199.9,365.1c-41.8,0-79.4,9.8-107.4,8.1c-38.9-2.3-54.5-16.4-83.6-19.9
+                     c-29.1-3.5-71.5,3.4-110.4,1c-28-1.7-56.4-13.7-98.2-13.7c-41.8,0-70.2,12-98.2,13.7c-38.9,2.3-81.4-4.6-110.4-1
+                     c-29.1,3.5-44.7,17.5-83.6,19.9c-28,1.7-65.7-8.2-107.5-8.2c-41.8,0-79.5,9.9-107.5,8.2c-38.9-2.3-54.5-16.3-83.6-19.9
+                     c-29.1-3.5-72,3.4-110.9,1c-28-1.7-56.7-13.7-98.7-13.7V438h1200L1199.9,365.1z" />
+                        <g class="liquidBubblesGroup" fill="#0ca4ff" clip-path="url(#sphereMask)">
+                            <path class="liquidFront" fill="#0ca4ff"
+                                d="M1199.9,329.6c-44,0-70.6,29.4-96.4,33c-36.1,5.1-70.7-14.5-106.8-9.4	c-25.8,3.7-52.4,33.3-96.4,33.3c-44,0-70.7-29.7-96.4-33.4c-36.1-5.1-70.7,14.4-106.8,9.2c-25.8-3.7-52.4-33.3-96.5-33.3	c-44,0-70.7,29.7-96.5,33.3c-36.1,5.1-70.7-14.4-106.8-9.3c-25.8,3.7-52.4,33.3-96.5,33.3c-44,0-70.7-29.7-96.5-33.3	c-36.1-5.1-71.2,14.4-107.3,9.3c-25.8-3.7-52-33.3-97-33.3V533h1200L1199.9,329.6z" />
+                            <circle class="bubble0" cx="350" cy="400" r="8" />
+                            <circle class="bubble1" cx="320" cy="400" r="6" />
+                            <circle class="bubble2" cx="300" cy="400" r="12" />
+                            <circle class="bubble3" cx="276" cy="400" r="3" />
+                            <circle class="bubble4" cx="244" cy="400" r="4" />
+                            <circle class="bubblePop0" cx="280" cy="400" r="5" />
+                            <circle class="bubblePop1" cx="310" cy="390" r="5" />
+                            <circle class="bubblePop2" cx="350" cy="410" r="5" />
+                        </g>
+                        <g class="darkBubbleGroup" fill="none" stroke="none">
+                            <circle class="darkBubble" cx="310" cy="480" r="7" />
+                            <circle class="darkBubble" cx="360" cy="480" r="5" />
+                            <circle class="darkBubble" cx="230" cy="480" r="6" />
+                            <circle class="darkBubble" cx="345" cy="480" r="3" />
+                            <circle class="darkBubble" cx="290" cy="480" r="8" />
+                            <circle class="darkBubble" cx="320" cy="480" r="2" />
+                            <circle class="darkBubble" cx="260" cy="480" r="9" />
+                        </g>
+                        <path class="pop" fill="none" stroke="none" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" d="
+                     M37.4,9c2.1-2.1,4.2-4.2,6.3-6.3 M2,44.4c2.2-2.2,4.5-4.5,6.7-6.7 M37.4,37.4c2.1,2.1,4.2,4.2,6.3,6.3 M2,2c2.2,2.2,4.5,4.5,6.7,6.7
+                     " />
+                    </g>
+                    <!--
+         
+                         path class="flask" opacity="1" fill="none" stroke="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="		M379.2,108.2l-20.5,20.5l0.1,126.3h0.2c39.7,21,66.7,62.9,66.7,111c0,69.4-56.3,125.7-125.7,125.7S174.3,435.4,174.3,366
+                         c0-48.1,27.1-89.9,66.8-111l0.1-126.3l-20.5-20.5"/  
+         -->
+                    <radialGradient id="shine" cx="280" cy="337" r="100" gradientUnits="userSpaceOnUse">
+
+                        <stop offset="0.02" style="stop-color:#fff;stop-opacity:0.2" />
+
+                        <stop offset="1" style="stop-color:#1B52D4;stop-opacity:0.1" />
+                    </radialGradient>
+
+                    <circle opacity="0.9" fill="url(#shine)" stroke="none" stroke-width="0.4957" stroke-miterlimit="10"
+                        cx="300" cy="367" r="100" />
+
+                </svg>
 
             </div>
         </div>
     </div>
+    <!------------------end preloader---------------------->
+
+
+    <!-- START NAVBAR -->
+    <div class="nav">
+        <div class="nav__top">
+            <div class="container">
+                <div class="row row--no-gutter">
+                    <div class="col col-xl-6">
+                        <div class="nav__top--numbers">
+                            <span class="nav__top--numbers-item">09369236420</span>
+
+                            <span class="nav__top--numbers-item">09369236420</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="nav__bottom">
         <div class="container">
-            <div class="row">
+            <div class="row row--no-gutter">
+                <div class="col col-xl-8">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <a href="" class="nav__link">صفحه اصلی</a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="" class="nav__link">نمایندگی ها</a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="" class="nav__link">مقالات </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="" class="nav__link">تماس با ما</a>
+                        </li>
+
+                        <li class="nav__menu-item">
+                            <a href="./contact.html" class="btn btn--primary">گزارش تعمیر </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col col-xl-4">
+                    <div class="nav__logo float-left">
+                        <img src="./static//images/Anitamir-logo2.png" alt="">
+                    </div>
+
+                    <div class="menu-icon">
+                        <svg>
+                            <use xlink:href="./static//images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- START SIDENAV -->
+    <div class="sidenav">
+        <div class="close-icon">
+            <svg class="clear-icon">
+                <use xlink:href="./static//images/sprite.svg#icon-clear"></use>
+            </svg>
+        </div>
+
+        <div class="sidenav__logo">
+            <div class="big-logo z-10">
+                <img src="./static//images/Anitamir-logo2.png" alt="">
+            </div>
+        </div>
+        \
+        <ul class="sidenav__menu">
+            <li class="sidenav__menu-item">
+                <a class="sidenav__link">
+                    صفحه اصلی
+                </a>
+            </li>
+
+            <li class="sidenav__menu-item">
+                <div class="d-flex ai-c jc-sw col-12">
+                    <a class="sidenav__link d-flex ai-c jc-sw">
+                        نمایندگی ها
+
+                        <svg class="down-icon">
+                            <use xlink:href="./static//images/sprite.svg#icon-angle-down"></use>
+                        </svg>
+                    </a>
 
 
-                <ul class="nav__menu">
-                    <li class="nav__menu-item">
-                        <a href="" class="nav__link">صفحه اصلی</a>
+                </div>
+
+                <ul class="sidenav__submenu">
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر لباسشویی بوش
+                        </a>
                     </li>
-                    <li class="nav__menu-item">
-                        <a href="" class="nav__link">نمایندگی ها</a>
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر
+                        </a>
                     </li>
-                    <li class="nav__menu-item">
-                        <a href="" class="nav__link">مقالات </a>
-                    </li>
-                    <li class="nav__menu-item">
-                        <a href="" class="nav__link">تماس با ما</a>
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر لباسشویی بوش
+                        </a>
                     </li>
 
                 </ul>
 
-                <a href="" class="btn bg-orange btn-contact">گزارش تعمیر </a>
+            </li>
 
-
-                <div class="nav__logo">
-                    <img src="images/Anitamir-logo2.png" alt="">
-                </div>
-
-                <div class="menu-icon">
-                    <svg>
-                        <use xlink:href="images/sprite.svg#icon-menu"></use>
-                    </svg>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="sidenav">
-
-    <div class="close-icon">
-        <svg class="clear-icon">
-            <use xlink:href="images/sprite.svg#icon-clear"></use>
-        </svg>
-    </div>
-
-    <div class="sidenav__logo">
-        <div class="big-logo z-10">
-            <img src="images/Anitamir-logo2.png" alt="">
-        </div>
-    </div>
-
-    <ul class="sidenav__menu">
-
-        <li class="sidenav__menu-item">
-            <a class="sidenav__link">
-                صفحه اصلی
-            </a>
-        </li>
-
-        <li class="sidenav__menu-item">
-            <div class="d-flex ai-c jc-sw col-12">
-                <a class="sidenav__link d-flex ai-c jc-sw">
-                    نمایندگی ها
-
-                    <svg class="down-icon">
-                        <use xlink:href="images/sprite.svg#icon-angle-down"></use>
-                    </svg>
+            <li class="sidenav__menu-item">
+                <a href="" class="sidenav__link">
+                    مقالات
                 </a>
+                <ul class="sidenav__submenu">
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر لباسشویی بوش
+                        </a>
+                    </li>
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر
+                        </a>
+                    </li>
+                    <li class="sidenav__submenu-item">
+                        <a class="sidenav__submenu-link">
+                            نمایندگی تعمیر لباسشویی بوش
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="sidenav__menu-item">
+                <a href="./contact.html" class="sidenav__link">
+                    تماس با ما
+                </a>
+            </li>
 
 
+        </ul>
+
+        <div class="sidenav__footer">
+            <div class="sidenav__footer-item">
+                <span>شماره تماس</span>
+                <div class="contact-numbers">
+                    <a class="btn btn--secnodary mt10">09369236420</a>
+
+                    <a class="btn btn--secnodary mt10">09369236420</a>
+                </div>
             </div>
 
-            <ul class="sidenav__submenu">
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر لباسشویی بوش
-                    </a>
-                </li>
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر
-                    </a>
-                </li>
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر لباسشویی بوش
-                    </a>
-                </li>
-
-            </ul>
-
-        </li>
-
-        <li class="sidenav__menu-item">
-            <a href="" class="sidenav__link">
-                مقالات
-            </a>
-            <ul class="sidenav__submenu">
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر لباسشویی بوش
-                    </a>
-                </li>
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر
-                    </a>
-                </li>
-                <li class="sidenav__submenu-item">
-                    <a class="sidenav__submenu-link">
-                        نمایندگی تعمیر لباسشویی بوش
-                    </a>
-                </li>
-
-            </ul>
-        </li>
-
-        <li class="sidenav__menu-item">
-            <a href="" class="sidenav__link">
-                تماس با ما
-            </a>
-        </li>
-
-
-    </ul>
-
-    <div class="sidenav__footer">
-        <div class="sidenav__footer-item">
-            <span>شماره تماس</span>
-            <div class="contact-numbers">
-                <a class="btn bg-black mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
-                <a class="btn bg-black mt-1">۰۹۳۶۹۲۳۶۴۲۰</a>
+            <div class="sidenav__footer-item mt10">
+                <div class="email d-flex ai-c">
+                    <span>ایمیل : </span>
+                    <p> anitamir@yahoo.com </p>
+                </div>
             </div>
         </div>
-
-        <div class="sidenav__footer-item mt-2">
-            <div class="email d-flex ai-c">
-                <span>ایمیل : </span>
-                <p> anitamir@yahoo.com </p>
-            </div>
-        </div>
-
-
     </div>
+    <!-- END SIDENAV -->
 
-</div>
-
-<a href="" class="btn-fixed">
-    <svg class="phone-icon">
-        <use xlink:href="images#sprite.svg#icon-phone"></use>
-    </svg>
-</a>
-
-<main>
     <div class="container">
-        <h2 class="heading-2 text-center">
-            آنچه مردم در مورد آنی تعمیر می گویند
-        </h2>
-        <h3 class="heading-sub text-center">آیا می خواهید در مورد تفاوت های آنی تعمیر بدانید؟ آن را مستقیماً از مشتریان
-            ما بشنوید! برخی از بررسی های زیر را بررسی کنید تا درباره نحوه کار با تیم حرفه ای تعمیر ماشین لیاسشویی ما
-            بیشتر بدانید. اگر قبلاً با ما کار کرده‌اید، مااز شما را درخواست می کنیم که نظر خود را بنویسید!</h3>
+        <div class="row row--no-gutter mt50">
+            <div class="col-xl-12">
+                <h2 class="heading-2 text-center">
+                    آنچه مردم در مورد آنی تعمیر می گویند
+                </h2>
 
-        <div class="col-12 review__creator mt-2">
-            <div class="col-12 text-center">
-                <div class="review__button">
-                    <svg class="heart-icon">
-                        <use xlink:href="images/sprite.svg#icon-favorite"></use>
-                    </svg>
-
-                    <p>
-                        تجربه ی خود را با ما به اشتراگ بگذارید
-                    </p>
-
-                </div>
+                <p class="text-3 text-center mt10">
+                    آیا می خواهید در مورد تفاوت های آنی تعمیر بدانید؟ آن را مستقیماً از مشتریان ما بشنوید! برخی از بررسی
+                    های زیر را بررسی کنید تا درباره نحوه کار با تیم حرفه ای تعمیر ماشین لیاسشویی ما بیشتر بدانید. اگر
+                    قبلاً با ما کار کرده‌اید، مااز شما را درخواست می کنیم که نظر خود را بنویسید!
+                </p>
             </div>
 
-            <div class="col-12">
-                <div class="review__create">
+            <div class="col col-xl-12 col-sm-12 mt10">
+                <div class="reviewPannel swiper text-center">
+                    <div class="swiper-wrapper">
+                        <div class=" swiper-slide text-center">
+                            <div class="reviewPannel__stars mt50">
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
 
-                    <div class="close-icon">
-                        <svg class="clear-icon">
-                            <use xlink:href="images/sprite.svg#icon-clear"></use>
-                        </svg>
-                    </div>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
 
-                    <h3 class="heading-3">
-                        نظر خود را بنویسید
-                    </h3>
-                    <p>تجربه ی خود را به اشتراک بگذارید</p>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
 
-                    <div class="reviewPannel__stars mt-2">
-                        <svg class="star-o-icon" value="1">
-                            <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                        </svg>
-                        <svg class="star-o-icon" value="2">
-                            <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                        </svg>
-                        <svg class="star-o-icon" value="3">
-                            <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                        </svg>
-                        <svg class="star-o-icon" value="4">
-                            <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                        </svg>
-                        <svg class="star-o-icon" value="5">
-                            <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                        </svg>
-                    </div>
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
 
-                    <form class="form">
-                        <label for="fullname" class="form__label">نام و نام خانوادگی</label>
-                        <input type="text" name="fullName" class="form__input ">
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
+                            </div>
 
-                        <label for="email" class="form__label">ایمیل</label>
-                        <input type="email" name="email" class="form__input ">
+                            <p class="fg-white text-7 p10">
+                                نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
+                                شوم
+                                زیرا می دانم با چه کسی تماس بگیرم!
+                            </p>
 
-                        <label for="location" class="form__label">محل زندگی</label>
-                        <input type="text" name="location" class="form__input ">
+                            <div class="reviewPannel__name fg-primary">
+                                جعفرپناهی
+                            </div>
+                        </div>
 
-                        <label for="description" class="form__label">توضیحات</label>
-                        <textarea name="description" class="form__textarea form__input"></textarea>
+                        <div class="swiper-slide text-center">
+                            <div class="reviewPannel__stars mt50">
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
 
-                        <a type="submit" class="submit btn btn-submit bg-orange" onclick="sendReview(event)"> ارسال</a>
-                    </form>
+                            </div>
 
-                </div>
-            </div>
-        </div>
+                            <p class="fg-white text-7 p10">
+                                نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
+                                شوم
+                                زیرا می دانم با چه کسی تماس بگیرم!
+                            </p>
 
-        <div class="row mt-4">
-            <div class="col-12" id="app">
-                <div class="col-3" v-for="(review , index) in reviews" :key="review.index">
-                    <!--
-                                        <div class="reviewPannel__stars mt-2">
-                                            <svg class="star-icon">
-                                                <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                            </svg>
-                                            <svg class="star-icon">
-                                                <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                            </svg>
-                                            <svg class="star-icon">
-                                                <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                            </svg>
-                                            <svg class="star-o-icon">
-                                                <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                                            </svg>
-                                            <svg class="star-o-icon">
-                                                <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                                            </svg>
-                                            
-                                        </div>
+                            <div class="reviewPannel__name fg-primary">
+                                جعفرپناهی
+                            </div>
+                        </div>
 
-                            </div> -->
+                        <div class=" swiper-slide text-center">
+                            <div class="reviewPannel__stars mt50">
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star1"></use>
+                                </svg>
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
+                                <svg class="star-o-icon">
+                                    <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
+                                </svg>
+                            </div>
 
-                    <div class="review__item">
-                        <div class="level">
-                            <div class="block pd-1 mt-1 bg-black">
-                                <div class="block__content text-center">
-                                    <!--                                             
-                                            <div class="reviewPannel__stars mt-2">
-                                                <svg class="star-icon">
-                                                    <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                                </svg>
-                                                <svg class="star-icon">
-                                                    <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                                </svg>
-                                                <svg class="star-icon">
-                                                    <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                                </svg>
-                                                <svg class="star-o-icon">
-                                                    <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                                                </svg>
-                                                <svg class="star-o-icon">
-                                                    <use xlink:href="images/sprite.svg#icon-star_outline"></use>
-                                                </svg>
-                                                
-                                            </div> -->
-                                    <div class="reviewPannel__stars mt-2">
-                                        <span v-for="star in review.stars">
-                                            <svg class="star-icon" v-if="star <= review.stars">
-                                                <use xlink:href="images/sprite.svg#icon-star1"></use>
-                                            </svg>
+                            <p class="fg-white text-7 p10">
+                                نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
+                                شوم
+                                زیرا می دانم با چه کسی تماس بگیرم!
+                            </p>
 
-                                        </span>
-                                    </div>
-
-
-                                    <p>
-                                        {{review.description}}
-                                    </p>
-
-                                    <div class="review__location mt-2">
-                                        {{review.location}}
-                                    </div>
-
-                                </div>
+                            <div class="reviewPannel__name fg-primary">
+                                جعفرپناهی
                             </div>
                         </div>
                     </div>
 
+                    <div class="swiper-pagination"></div>
                 </div>
+            </div>
 
+            <div class="col col-xl-12">
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="text-secondary card__title">
+                            تجربه ی خود را با ما به اشتراگ بگذارید
+                        </h3>
+                    </div>
+
+                    <div class="card__content">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col col-xl-6 col-xs-12">
+                                    <div class="control">
+                                        <label class="control__label">نام و نام خانوادگی</label>
+
+                                        <div class="control__field">
+                                            <div class="control__wrapper">
+                                                <input type="text" class="control__input" placeholder="وارد کنید...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-xl-6 col-xs-12">
+                                    <div class="control">
+                                        <label class="control__label">ایمیل</label>
+
+                                        <div class="control__field">
+                                            <div class="control__wrapper">
+                                                <input type="number" class="control__input" placeholder="وارد کنید...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col col-xl-6 col-xs-12">
+                                    <div class="control">
+                                        <label class="control__label">محل زندگی</label>
+
+                                        <div class="control__field">
+                                            <div class="control__wrapper">
+                                                <input type="number" class="control__input" placeholder="وارد کنید...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-xl-12">
+                                    <label class="control__label control__label--marked">
+                                        توضیحات
+                                    </label>
+
+                                    <div class="textarea__field control__field">
+                                        <div class="control__wrapper">
+                                            <textarea placeholder="وارد کنید ..."
+                                                class="textarea__input control__input">
+                                        </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="control">
+                                        <a type="submit" class="btn btn--primary" onclick="submitForm(event)"> ارسال</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-</main>
-<div class="popuop-flash ">
-    درخواست شما ارسال شد. در اسرع وقت با شما تماس گرفته می شود.
-</div>
-
-<div class="loader-form">
-    <img src="images/loader.gif" alt="">
-</div>
-
-<section class="section footer bg-black">
-
-    <div class="container">
-        <a class="btn-toTop">
-            برگشت به بالا
-        </a>
-
-        <div class="row">
-            <div class="col-3">
-
-                <div class="footer__section footer__logo">
-                    <div class="big-logo z-10">
-                        <img src="images/Anitamir-logo2.png" alt="">
-                    </div>
-
-                    <h4>تعمیر تخصصی انواع لباسشویی در منزل</h4>
-
-                    <p>با ما تماس بگیرید:
-                    </p>
-
-                    <a href="" class="btn bg-orange btn-contact mt-3">۰۹۳۶۹۲۳۶۴۲۰
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xl-12">
+                    <a class="footer__to-top">
+                        برگشت به بالا
                     </a>
                 </div>
 
-            </div>
+                <div class="col col-xl-12">
+                    <img class="footer__logo" src="./static//images/Anitamir-logo2.png" alt="">
 
-            <div class="col-3 d-flex">
-                <div class="footer__section">
-                    <h4>لینک های سریع</h4>
+                    <h4 class="fg-white mt10">تعمیر تخصصی انواع لباسشویی در منزل</h4>
+
+                    <p class="fg-white mt10">با ما تماس بگیرید:
+                    </p>
+
+                    <a class="btn btn--primary weight-800 mt10">09369236420
+                    </a>
+                </div>
+
+                <div class="col col-xl-3">
+                    <h4 class="fg-white">لینک های سریع</h4>
+
                     <ul>
                         <li>
                             <a href="" class="footer__link">مناطق مورد پوشش</a>
@@ -418,55 +516,45 @@
                             <a href="" class="footer__link">درباره ی ما</a>
                         </li>
 
-                        <li>
-                            <a href="" class="footer__link">لینک های سریع</a>
-                        </li>
-
                     </ul>
                 </div>
-            </div>
 
 
-            <div class="col-3 d-flex">
-                <div class="footer__section">
-                    <h4>ما را دنبال کنید</h4>
+                <div class="col col-xl-3">
+                    <h4 class="fg-white">ما را دنبال کنید</h4>
+
                     <div class="social d-flex">
-                        <div class="social__item">
+                        <div class="social__item mr10">
                             <svg class="instagram-icon">
-                                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                                <use xlink:href="./static//images/sprite.svg#icon-instagram"></use>
                             </svg>
                         </div>
-                        <div class="social__item mr-1">
+
+                        <div class="social__item mr10">
                             <svg class="instagram-icon">
-                                <use xlink:href="images/sprite.svg#icon-paper-plane"></use>
+                                <use xlink:href="./static//images/sprite.svg#icon-paper-plane"></use>
                             </svg>
                         </div>
                     </div>
 
-                    <div class="email d-flex ai-c">
+                    <div class="fg-white">
                         <span>ایمیل : </span>
+
                         <p> anitamir@yahoo.com </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="copyright"></section>
+    <section class="copyright"></section>
 
+    <script src="static/js/gsap.js"></script>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js" integrity="sha256-cyEXrJKjO3YNkpCjPxVBdi7pRJ3EF+okm1oN9Qc4rRY=" crossorigin="anonymous"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="assets/scripts/index.js"></script>
 
-
-<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

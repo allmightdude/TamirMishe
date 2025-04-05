@@ -712,7 +712,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "dev": "gulp"
   },
   "author": "",
   "license": "ISC"

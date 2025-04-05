@@ -3,23 +3,23 @@ const browserSync = require("browser-sync");
 const sass = require("gulp-sass")(require("sass"));
 const env = require("gulp-env");
 
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: "./app",
-    },
-  });
-  watch(["./app/scss/**/*.scss"], scss);
-  watch("./app/css/*.css").on("change", browserSync.reload);
-  watch("./app/js/*.js").on("change", browserSync.reload);
-  watch("./app/**/*.html").on("change", browserSync.reload);
+function serve(){
+    browserSync.init({
+        server : {
+            baseDir : "./app"
+        }
+    })
+    watch(['./app/assets/styles/**/*.scss'] , scss)
+    watch('./app/assets/styles/*.css').on('change' , browserSync.reload)
+    watch('./app/assets/scripts/*.js').on('change' , browserSync.reload)
+    watch("./app/**/*.html").on('change', browserSync.reload)
 }
 
-function scss(done) {
-  src("./app/scss/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(dest("./app/css/"));
-  done();
+function scss(done){
+    src('./app/assets/styles/**/*.scss')
+    .pipe(sass().on('error' , sass.logError))
+    .pipe(dest('./app/assets/css'))
+    done();
 }
 
 function setEnv() {

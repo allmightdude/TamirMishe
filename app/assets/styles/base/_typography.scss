@@ -1,0 +1,246 @@
+/**
+ * Body Font
+ * *********************************/
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/fonts/eot/iranyekanRegular.eot");
+  src: url("/static/fonts/eot/iranyekanRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/fonts/woff/iranyekanRegular.woff") format("woff"),
+    url("/static/fonts/ttf/iranyekanRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/static/fonts/eot/iranyekanMedium.eot");
+  src: url("/static/fonts/eot/iranyekanMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/fonts/woff/iranyekanMedium.woff") format("woff"),
+    url("/static/fonts/ttf/iranyekanMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/static/fonts/eot/iranyekanBold.eot");
+  src: url("/static/fonts/eot/iranyekanBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/fonts/woff/iranyekanBold.woff") format("woff"),
+    url("/static/fonts/ttf/iranyekanBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/static/fonts/eot/iranyekanExtrabold.eot");
+  src: url("/static/fonts/eot/iranyekanExtrabold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/fonts/woff/iranyekanExtrabold.woff") format("woff"),
+    url("/static/fonts/ttf/iranyekanExtrabold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/static/fonts/eot/iranyekanBlack.eot");
+  src: url("/static/fonts/eot/iranyekanBlack.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/fonts/woff/iranyekanBlack.woff") format("woff"),
+    url("/static/fonts/ttf/iranyekanBlack.ttf") format("truetype");
+}
+
+/**
+ * Icon Fonts
+ * *********************************/
+@font-face {
+  font-family: "icons";
+  src: url("/static/fonts/icons.eot?l568pt");
+  src: url("/static/fonts/icons.eot?l568pt#iefix") format("embedded-opentype"),
+    url("/static/fonts/icons.ttf?l568pt") format("truetype"),
+    url("/static/fonts/icons.woff?l568pt") format("woff"),
+    url("/static/fonts/icons.svg?l568pt#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  font-weight: 400;
+  line-height: 2;
+  font-size: 1.5rem;
+  font-family: iranYekan;
+  color: #222f3e;
+}
+
+/**
+ * Font Weight
+ * *********************************/
+.weight-400 {
+  font-weight: 400 !important;
+}
+
+.weight-500 {
+  font-weight: 500 !important;
+}
+
+.weight-600 {
+  font-weight: 600 !important;
+}
+
+.weight-800 {
+  font-weight: 800 !important;
+}
+
+.weight-900 {
+  font-weight: 900 !important;
+}
+
+/**
+ * Heading
+ * *********************************/
+.heading-1 {
+  font-size: 4.8rem;
+  font-weight: 900;
+}
+
+.heading-2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.heading-4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.heading-5 {
+  font-size: 1.6rem;
+}
+
+.heading-6 {
+  font-size: 1.4rem;
+}
+
+/**
+* Text
+* *********************************/
+.text {
+  line-height: 2;
+
+  &--pre-line {
+    white-space: pre-line;
+  }
+}
+
+.text-1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.text-2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.text-3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.text-4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.text-5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.text-6 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.text-7 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/**
+* captions
+************************************/
+.caption-1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.caption-2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+/**
+ * List
+ * *********************************/
+.unorder-list,
+.order-list {
+  padding-right: 24px;
+  line-height: 1.8em;
+
+  @include max-width(xs) {
+    font-size: 1.3rem;
+  }
+}
+
+.order-list {
+  list-style-type: decimal;
+
+  .order-list {
+    list-style-type: lower-roman;
+  }
+}
+
+.unorder-list {
+  list-style-type: circle;
+
+  .unorder-list {
+    list-style-type: disc;
+  }
+}
+
+[class*="-icon"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: color('primary' , 'lighten-2');
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+@include selection(color("white", "base"), color("primary", "lighten-1"));

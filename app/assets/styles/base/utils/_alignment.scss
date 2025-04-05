@@ -1,0 +1,61 @@
+@include make-justify();
+@include make-justify(xl);
+
+@include max-width(lg) {
+  @include make-justify(lg);
+}
+
+@include max-width(md) {
+  @include make-justify(md);
+}
+
+@include max-width(sm) {
+  @include make-justify(sm);
+}
+
+@include max-width(xs) {
+  @include make-justify(xs);
+}
+
+
+// Make Align Items
+@include make-align();
+
+@include max-width(xl) {
+  @include make-align(xl);
+}
+
+@include max-width(lg) {
+  @include make-align(lg);
+}
+
+
+@include max-width(lg) {
+  @include make-align(md);
+}
+
+
+@include max-width(lg) {
+  @include make-align(sm);
+}
+
+@include max-width(lg) {
+  @include make-align(xs);
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex-col-center {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.flex-row-center {
+  @include flexCenter;
+}
