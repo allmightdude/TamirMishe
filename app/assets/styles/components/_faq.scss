@@ -1,16 +1,17 @@
 .faq {
   &__item {
     padding: 2rem 4rem;
-    background-color:color("white" , "darken-1");
+    background-color: color("white", "darken-1");
     margin-top: 1.5rem;
     border-radius: 4px;
     box-shadow: $depth-1;
     font-family: 1.1rem !important;
-    border-top: 3px solid color("secondary" , "base");
+    border-top: 3px solid color("secondary", "base");
     cursor: pointer;
+    transition: all 0.3s ease;
 
     &.active {
-      border-top: 3px solid color("primary" , "base");
+      // border-top: 3px solid color("primary", "base");
     }
   }
 
@@ -23,10 +24,30 @@
     font-size: 1.4rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 650ms;
+    transition: max-height 0.3s ease-out;
   }
 
   &__question {
     cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid color("primary", "base");
+      border-bottom: 2px solid color("primary", "base");
+      transform: translateY(-50%) rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+
+    &[data-expand="true"]::after {
+      transform: translateY(-50%) rotate(-135deg);
+    }
   }
 }

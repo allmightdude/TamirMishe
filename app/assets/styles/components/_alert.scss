@@ -1,7 +1,4 @@
-/*==============================
-Alert
-================================*/
-.v-alert {
+.alert {
   position: relative;
   border-width: 1px;
   border-style: solid;
@@ -9,12 +6,7 @@ Alert
   padding: 12px 16px;
   font-size: 14px;
   line-height: 24px;
-  @include radius(12px);
-
-  @include max-width(xs) {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  border-radius: 12px;
 
   &__close {
     cursor: pointer;
@@ -32,7 +24,7 @@ Alert
   &--dense {
     font-size: 13px;
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 8px;
   }
 

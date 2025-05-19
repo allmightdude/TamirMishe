@@ -2705,9 +2705,7 @@ body {
   font-family: 1.1rem !important;
   border-top: 3px solid #3f4b58;
   cursor: pointer;
-}
-.faq__item.active {
-  border-top: 3px solid #efce56;
+  transition: all 0.3s ease;
 }
 .faq__item:target .faq__answer {
   max-height: 20rem;
@@ -2717,10 +2715,28 @@ body {
   font-size: 1.4rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 650ms;
+  transition: max-height 0.3s ease-out;
 }
 .faq__question {
   cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+.faq__question::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #efce56;
+  border-bottom: 2px solid #efce56;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.faq__question[data-expand=true]::after {
+  transform: translateY(-50%) rotate(-135deg);
 }
 
 /**
@@ -2851,15 +2867,10 @@ input::placeholder {
 .img-fluid--addon {
   background-image: linear-gradient(to right bottom, #222f3e, #393939);
   color: white;
-  padding: 1.5rem 2.5rem;
-  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   margin-top: -1rem;
   box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.25);
-}
-@media only screen and (max-width: 74.8rem) {
-  .img-fluid--addon {
-    padding: 1rem 2rem;
-  }
 }
 
 .representation__item {
@@ -3624,10 +3635,7 @@ input::placeholder {
   background-color: #f7eded;
 }
 
-/*==============================
-Alert
-================================*/
-.v-alert {
+.alert {
   position: relative;
   border-width: 1px;
   border-style: solid;
@@ -3636,17 +3644,8 @@ Alert
   font-size: 14px;
   line-height: 24px;
   border-radius: 12px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
 }
-@media only screen and (max-width: 48rem) {
-  .v-alert {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-.v-alert__close {
+.alert__close {
   cursor: pointer;
   width: 22px;
   height: 22px;
@@ -3654,47 +3653,47 @@ Alert
   text-align: center;
   opacity: 0.7;
 }
-.v-alert__close:hover {
+.alert__close:hover {
   opacity: 1;
 }
-.v-alert--dense {
+.alert--dense {
   font-size: 13px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
 }
-.v-alert--flat {
+.alert--flat {
   border: none;
 }
-.v-alert--sharp {
+.alert--sharp {
   border-radius: 0;
 }
-.v-alert--default {
+.alert--default {
   color: #777;
   border-color: rgba(119, 119, 119, 0.2);
   background-color: rgba(119, 119, 119, 0.06);
 }
-.v-alert--success {
+.alert--success {
   color: #5dcc6d;
   border-color: rgba(93, 204, 109, 0.3);
   background-color: rgba(93, 204, 109, 0.06);
 }
-.v-alert--info {
+.alert--info {
   color: #69c9d6;
   border-color: rgba(105, 201, 214, 0.3);
   background-color: rgba(105, 201, 214, 0.06);
 }
-.v-alert--warning {
+.alert--warning {
   color: #ffa556;
   border-color: rgba(255, 165, 86, 0.3);
   background-color: rgba(255, 165, 86, 0.06);
 }
-.v-alert--error {
+.alert--error {
   color: #ff6666;
   border-color: rgba(255, 102, 102, 0.3);
   background-color: rgba(255, 102, 102, 0.06);
 }
-.v-alert__text {
+.alert__text {
   padding: 0 10px;
 }
 

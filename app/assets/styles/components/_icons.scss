@@ -1,0 +1,73 @@
+// Icon styles
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    // Sizes
+    &--sm {
+        font-size: 1rem;
+    }
+
+    &--md {
+        font-size: 1.5rem;
+    }
+
+    &--lg {
+        font-size: 2rem;
+    }
+
+    &--xl {
+        font-size: 2.5rem;
+    }
+
+    // Colors
+    &--primary {
+        color: color("primary", "base");
+    }
+
+    &--secondary {
+        color: color("secondary", "base");
+    }
+
+    &--white {
+        color: color("white", "base");
+    }
+
+    // Common icons
+    &--phone {
+        &::before {
+            content: "\f095"; // Font Awesome phone icon
+        }
+    }
+
+    &--email {
+        &::before {
+            content: "\f0e0"; // Font Awesome envelope icon
+        }
+    }
+
+    &--location {
+        &::before {
+            content: "\f3c5"; // Font Awesome location-dot icon
+        }
+    }
+
+    &--clock {
+        &::before {
+            content: "\f017"; // Font Awesome clock icon
+        }
+    }
+
+    &--check {
+        &::before {
+            content: "\f00c"; // Font Awesome check icon
+        }
+    }
+
+    &--star {
+        &::before {
+            content: "\f005"; // Font Awesome star icon
+        }
+    }
+}
