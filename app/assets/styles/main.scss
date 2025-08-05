@@ -1,27 +1,57 @@
 // Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@import './abstracts/vars/_colors';
+@import './abstracts/vars/_depth';
+@import './abstracts/vars/_responsive';
+@import './abstracts/vars/_typography';
+@import './abstracts/vars/_breakpoints';
+@import './abstracts/functions/_colors';
+@import './abstracts/mixins/_alignment';
+@import './abstracts/mixins/_button';
+@import './abstracts/mixins/_clearfix';
+@import './abstracts/mixins/_flex';
+@import './abstracts/mixins/_grid';
+@import './abstracts/mixins/_margin';
+@import './abstracts/mixins/_padding';
+@import './abstracts/mixins/_query';
+@import './abstracts/mixins/_radius';
+@import './abstracts/mixins/_scrollbar';
+@import './abstracts/mixins/_selection';
 
 // Base styles
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/utilities';
+@import './base/_base';
+@import './base/_main';
+@import './base/_typography';
+@import './base/_utilities';
+@import './base/_animations';
 
 // Components
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/forms';
-@import 'components/navigation';
-@import 'components/icomoon'; // Add IcoMoon styles
+@import './components/_buttons';
+@import './components/_card';
+@import './components/_form';
+@import './components/_icomoon';
+@import './components/_icons';
+@import './components/_img';
+@import './components/_alert';
+@import './components/_faq';
+@import './components/_banner';
+@import './components/_block';
+@import './components/_col';
+@import './components/_container';
+@import './components/_divider';
+@import './components/_input';
+@import './components/_loader';
+@import './components/_representation';
+@import './components/_reviewPannel';
+@import './components/_row';
+@import './components/_advantage';
 
 // Layout
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/grid';
-@import 'layout/sidebar';
+@import './layouts/_topNav';
+@import './layouts/_footer';
+@import './layouts/_sidenav';
+@import './layouts/_article';
+@import './layouts/_articleLayout';
 
 // Pages
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/contact';
+@import './pages/_home';
+@import './pages/_contact';
