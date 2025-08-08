@@ -4411,7 +4411,7 @@ input::placeholder {
   margin-top: 10px;
 }
 .nav__logo {
-  width: 6rem;
+  width: 20rem;
   margin-right: 2rem;
 }
 .nav__logo img {
@@ -4433,7 +4433,7 @@ input::placeholder {
   color: white;
 }
 .footer__logo {
-  width: 10rem;
+  width: 20rem;
 }
 .footer__section {
   margin: 0 auto;
