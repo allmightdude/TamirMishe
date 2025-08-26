@@ -3,6 +3,7 @@ const commentSlider = new Swiper(".comment.swiper", {
   loop: true,
 
   spaceBetween: 10,
+  slidesPerView: 2,
 
   pagination: {
     el: ".comment .swiper-pagination",

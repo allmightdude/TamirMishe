@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link href="image/icons/Anitamir.png" rel="shortcut icon" />
+    <link href="image/icons/tamirmaster-logo.png" rel="shortcut icon" />
 
     <link rel="stylesheet" href="assets//css/style.css">
 </head>
@@ -121,7 +121,7 @@
 
     <!-- START NAVBAR -->
     <div class="nav">
-        <div class="nav__top">
+        <!-- <div class="nav__top">
             <div class="container">
                 <div class="row row--no-gutter">
                     <div class="col col-xl-6">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="nav__bottom">
             <div class="container">
@@ -157,7 +157,7 @@
 
                     <div class="col col-xl-4">
                         <div class="nav__logo float-left">
-                            <img src="./static/images/Anitamir.png" alt="">
+                            <img src="./static/images/tamirmaster-logo.png" alt="">
                         </div>
 
                         <div class="menu-icon">
@@ -183,7 +183,7 @@
 
         <div class="sidenav__logo">
             <div class="big-logo z-10">
-                <img src="./static/images/Anitamir.png" alt="">
+                <img src="./static/images/tamirmaster-logo.png" alt="">
             </div>
         </div>
 
@@ -287,7 +287,7 @@
     <section class="home-header">
         <div class="container align-center justify-center">
             <div class="row align-center">
-                <div class="col col-xl-6 col-sm-12">
+                <div class="col col-xl-12 col-sm-12">
                     <div class="heading-main">
                         <h1 class="heading-1">
                             نمایندگی مجاز تعمیرات لباسشویی
@@ -305,7 +305,7 @@
                         </h4>
                     </div>
                 </div>
-
+                <!-- 
                 <div class="col col-xl-6 col-sm-12 justify-center">
                     <div class="card home-header__contact margin-x-auto">
                         <div class="card__header">
@@ -313,28 +313,30 @@
                         </div>
 
                         <div class="card__content">
-                            <form class="form">
+                            <form class="form" id="contactForm">
                                 <div class="col col-xl-12">
                                     <div class="control">
-                                        <label class="control__label">نام و نام خانوادگی</label>
+                                        <label class="control__label">نام و نام خانوادگی <span class="required">*</span></label>
 
                                         <div class="control__field">
                                             <div class="control__wrapper">
-                                                <input type="text" class="control__input" placeholder="وارد کنید...">
+                                                <input type="text" class="control__input" name="fullname" required placeholder="وارد کنید...">
                                             </div>
                                         </div>
+                                        <div class="control__error" style="display: none;">لطفاً نام و نام خانوادگی را وارد کنید</div>
                                     </div>
                                 </div>
 
                                 <div class="col col-xl-12">
                                     <div class="control">
-                                        <label class="control__label">شماره تماس</label>
+                                        <label class="control__label">شماره تماس <span class="required">*</span></label>
 
                                         <div class="control__field">
                                             <div class="control__wrapper">
-                                                <input type="number" class="control__input" placeholder="وارد کنید...">
+                                                <input type="tel" class="control__input" name="phone" required placeholder="وارد کنید...">
                                             </div>
                                         </div>
+                                        <div class="control__error" style="display: none;">لطفاً شماره تماس را وارد کنید</div>
                                     </div>
                                 </div>
 
@@ -342,24 +344,33 @@
                                     <div class="control">
                                         <label class="control__label">توضیحات</label>
 
-                                        <div class="control__field">
+                                        <div class="textarea__field control__field">
                                             <div class="control__wrapper">
-                                                <input type="number" class="control__input" placeholder="وارد کنید...">
+                                                <textarea placeholder="وارد کنید ..."
+                                                    class="textarea__input control__input" name="description" required>
+                                            </textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-
                                 <div class="col">
                                     <div class="control">
-                                        <a type="submit" class="btn btn--primary" onclick="submitForm(event)"> ارسال</a>
+                                        <button type="submit" class="btn btn--primary">
+                                            ارسال
+                                        </button>
+                                        <button type="button" class="btn btn--secondary mt10" onclick="sendDirectToEmail()">
+                                            📧 ارسال مستقیم به ایمیل
+                                        </button>
+                                        <button type="button" class="btn btn--secondary mt10" onclick="testEmailJS()" style="margin-right: 10px;">
+                                            🧪 تست EmailJS
+                                        </button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -374,10 +385,7 @@
 
             <div class="col col-xl-6 col-sm-12">
                 <div class="img-fluid ">
-                    <img src="./static/images/samsungservice.png" alt="">
-                    <div class="img-fluid--addon">
-                        خدمات تخصصی سریع
-                    </div>
+                    <img src="./static/images/1.jpg" alt="">
                 </div>
             </div>
 
@@ -390,11 +398,11 @@
                             </svg>
 
                             <div class="prons__item-info">
-                                <h4>
-                                    سرعت در تعمیرات
-                                </h4>
-                                <p>تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                    برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
+                                <h3>سرعت در تعمیرات</h3>
+
+                                <p>تکنسین‌های مجرب تعمیرمستر در سریع‌ترین زمان ممکن و طبق برنامه‌ی شما در دسترس هستند.
+                                    برای تعیین وقت سرویس و تعمیر، به‌راحتی از قبل با ما تماس بگیرید و تجربه خدمات فوری
+                                    را داشته باشید.</p>
                             </div>
                         </div>
                     </div>
@@ -408,15 +416,12 @@
                             </svg>
 
                             <div class="prons__item-info">
-                                <h4>
-                                    بهترین کیفیت
-
-                                </h4>
-                                <p>تکنسین های ما بهترین خدمات و با کیفیت ترین خدمات
-                                    را به شما ارائه می دهند.</p>
+                                <h3>بهترین کیفیت خدمات</h3>
+                                <p>تیم تخصصی ما با بهره‌گیری از قطعات اورجینال و تجهیزات پیشرفته، بهترین و باکیفیت‌ترین
+                                    خدمات تعمیرات ماشین لباسشویی را به شما ارائه می‌دهد تا دستگاهتان مثل روز اول کار
+                                    کند.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -428,23 +433,28 @@
                             </svg>
 
                             <div class="prons__item-info">
-                                <h4>
-                                    قیمت گذاری اولیه
-                                </h4>
-                                <p>تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                    برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
+                                <h4>قیمت‌گذاری شفاف و منصفانه</h4>
+                                <p>در تعمیرمستر قیمت‌ها کاملاً شفاف و منصفانه تعیین می‌شوند. قبل از شروع کار، هزینه
+                                    تعمیرات به شما اعلام می‌شود تا بدون نگرانی و با اطمینان کامل از خدمات ما استفاده
+                                    کنید.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <div class="alert alert--success alert--dense mt10 text-center">
-                    همین الان درخواست خود را اطلاع دهید
+                <div class="alert alert--info alert--dense alert--flat mt20 text-center">
+                    <h4>
+                        خدمات تخصصی تعمیرات ماشین لباسشویی در منزل
+                    </h4>
                 </div>
 
-
+                <div class="alert alert--success alert--dense alert--flat mt20 text-center">
+                    <h4>
+                        همین حالا درخواست تعمیر لباسشویی خود را ثبت کنید و از خدمات سریع و مطمئن بهره‌مند شوید!
+                    </h4>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -456,8 +466,6 @@
                 </div>
 
                 <div class="representation swiper mt30">
-
-
                     <div class="representation-wrapper swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="representation__item" loading="lazy">
@@ -504,7 +512,6 @@
 
             <div class="col col-xl-12">
                 <div class="comment swiper">
-                    <!-- <h3 class="heading-3">مشتریان ما چه می گویند</h3> -->
 
                     <div class="comment__wrapper swiper-wrapper">
                         <div class="swiper-slide text-center">
@@ -513,33 +520,24 @@
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
                                 </div>
-
-                                <h3 class="heading-4 mt10">
-                                    جعفرپناهی
-                                </h3>
-
+                                <h3 class="heading-4 mt10">الهام رضایی</h3>
+                                <p class="comment__date">۲۵ آذر ۱۴۰۲</p>
                                 <p class="mt10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت
-                                    نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
+                                    لباسشویی من وسط شستن آب نمی‌کشید. با تعمیرمستر تماس گرفتم و همون روز مشکل رو پیدا و
+                                    تعمیر کردند. واقعاً سریع و حرفه‌ای!
                                 </p>
                             </div>
                         </div>
@@ -550,33 +548,24 @@
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-o-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
                                     </svg>
                                 </div>
-
-                                <h3 class="heading-4 mt10">
-                                    جعفرپناهی
-                                </h3>
-
+                                <h3 class="heading-4 mt10">علی فراهانی</h3>
+                                <p class="comment__date">۱۸ آذر ۱۴۰۲</p>
                                 <p class="mt10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت
-                                    نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
+                                    از پاسخگویی سریع و قیمت منصفانه‌شون خیلی راضی‌ام. حتی قطعه خراب رو تعمیر کردن و لازم
+                                    نشد تعویض بشه. ممنون از تیم خوبتون!
                                 </p>
                             </div>
                         </div>
@@ -587,37 +576,55 @@
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
                                 </div>
-
-                                <h3 class="heading-4 mt10">
-                                    جعفرپناهی
-                                </h3>
-
+                                <h3 class="heading-4 mt10">مهدی نادری</h3>
+                                <p class="comment__date">۱۲ آذر ۱۴۰۲</p>
                                 <p class="mt10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت
-                                    نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
+                                    تکنسینی که اومد بسیار مودب و دقیق بود. همه چیز رو کامل توضیح داد و لباسشویی ما که
+                                    روشن نمی‌شد، حالا مثل روز اول کار می‌کنه.
                                 </p>
                             </div>
                         </div>
 
+                        <div class="swiper-slide text-center">
+                            <div class="comment__item">
+                                <div class="comment__stars">
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
+                                    </svg>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
+                                    </svg>
+                                    <svg class="star-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
+                                    </svg>
+                                    <svg class="star-o-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    </svg>
+                                    <svg class="star-o-icon">
+                                        <use xlink:href="./static/images/sprite.svg#icon-star_outline"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="heading-4 mt10">سحر محمدی</h3>
+                                <p class="comment__date">۸ آذر ۱۴۰۲</p>
+                                <p class="mt10">
+                                    خوب بود ولی ای‌کاش زودتر نوبت می‌دادن. البته بعد از حضور تکنسین از کارشون کاملاً
+                                    راضی بودم. اخلاقشون عالی بود.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-pagination"></div>
@@ -634,20 +641,20 @@
         </div>
 
         <div class="row mt30">
+
+            <!-- کارت ۱ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    1
-                                </div>
-
+                                <div class="levels__number">1</div>
                                 <div>
                                     <h3 class="mt10">متخصصان باتجربه</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
+                                    <p class="levels__text mt10">
+                                        تمامی تکنسین‌های ما دوره‌دیده و باتجربه در زمینه تعمیر تخصصی انواع ماشین
+                                        لباسشویی هستند؛ برندهای ایرانی و خارجی را با دقت بالا در منزل شما تعمیر می‌کنیم.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -655,21 +662,19 @@
                 </div>
             </div>
 
+            <!-- کارت ۲ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    2
-                                </div>
-
+                                <div class="levels__number">2</div>
                                 <div>
                                     <h3 class="mt10">سرعت در خدمات</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
-
+                                    <p class="levels__text mt10">
+                                        پس از ثبت درخواست، نزدیک‌ترین تکنسین در سریع‌ترین زمان ممکن به محل شما اعزام
+                                        می‌شود. ما به ارزش وقت شما احترام می‌گذاریم.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -677,21 +682,19 @@
                 </div>
             </div>
 
+            <!-- کارت ۳ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    3
-                                </div>
-
+                                <div class="levels__number">3</div>
                                 <div>
                                     <h3 class="mt10">گارانتی خدمات</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
-
+                                    <p class="levels__text mt10">
+                                        تمام خدمات تعمیر ماشین لباسشویی توسط تعمیرمستر دارای ضمانت کتبی می‌باشد؛ خیالتان
+                                        از بابت کیفیت و دوام تعمیر راحت باشد.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -699,21 +702,19 @@
                 </div>
             </div>
 
+            <!-- کارت ۴ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    4
-                                </div>
-
+                                <div class="levels__number">4</div>
                                 <div>
-                                    <h3 class="mt10">هزینه های معقول</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
-
+                                    <h3 class="mt10">هزینه‌های منصفانه</h3>
+                                    <p class="levels__text mt10">
+                                        ما قبل از شروع تعمیر، هزینه‌ها را شفاف اعلام می‌کنیم و قیمت‌ها کاملاً منصفانه و
+                                        طبق نرخ اتحادیه می‌باشد. بدون هزینه پنهان.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -721,21 +722,19 @@
                 </div>
             </div>
 
+            <!-- کارت ۵ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    5
-                                </div>
-
+                                <div class="levels__number">5</div>
                                 <div>
-                                    <h3 class="mt10">تعمیر قطعات در صورت امکان</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
-
+                                    <h3 class="mt10">تعمیر به‌جای تعویض</h3>
+                                    <p class="levels__text mt10">
+                                        هدف ما کاهش هزینه‌های شماست؛ تا جای ممکن، قطعات معیوب را تعمیر می‌کنیم و فقط در
+                                        صورت لزوم اقدام به تعویض می‌نماییم.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -743,127 +742,140 @@
                 </div>
             </div>
 
+            <!-- کارت ۶ -->
             <div class="col-xl-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    6
-                                </div>
-
+                                <div class="levels__number">6</div>
                                 <div>
-                                    <h3 class="mt10">اصالت قطعه ها</h3>
-
-                                    <p class="levels__text mt10">تکنسین های ما طبق برنامه شما در دسترس هستند!
-                                        برای تعیین قرار ملاقات راحت از قبل تماس بگیرید.</p>
-
+                                    <h3 class="mt10">استفاده از قطعات اصلی</h3>
+                                    <p class="levels__text mt10">
+                                        در صورت نیاز به تعویض قطعه، فقط از قطعات اورجینال و باکیفیت استفاده می‌کنیم تا
+                                        عمر ماشین لباسشویی شما حفظ شود.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <section class="home-faq ">
             <div class="container">
                 <div>
                     <div class="col-xl-12 mt70">
-                        <h2 class="heading-2 text-center">
-                            سوالات متداول
-                        </h2>
+                        <h2 class="heading-2 text-center">سوالات متداول</h2>
                     </div>
 
                     <div class="mt10 text-center">
                         <div class="col-xl-12">
                             <div class="img-fluid img-fluid-medium">
-                                <!-- <img src="./static/images/man-vector.png" alt=""> -->
+                                <!-- تصویر دلخواه FAQ -->
                             </div>
                         </div>
 
                         <div class="row">
+
+                            <!-- سوال ۱ -->
                             <div class="col col-xl-12 col-sm-12">
                                 <div class="card">
                                     <div class="card__content">
                                         <h4 class="faq__question">
-                                            آیا متخصص بدون هماهنگی با من در زمان مقرپر مراجعه میکند؟
+                                            آیا تعمیرات ماشین لباسشویی در محل انجام می‌شود؟
                                         </h4>
-
                                         <div class="faq__answer mt10">
-                                            خیر، تمامی متخصصان علاوه بر زمان حدودی که شما برای حضور آنها مشخص می کنید
-                                            حتما
-                                            قبل
-                                            از
-                                            مراجعه تماس گرفته و از حضور و آمادگی شما مطمئن خواهند شد.
+                                            بله، تمامی خدمات تعمیر ماشین لباسشویی توسط تکنسین‌های ما به‌صورت کامل در
+                                            منزل شما انجام می‌شود. نیازی به حمل دستگاه به کارگاه نیست.
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- سوال ۲ -->
                             <div class="col col-xl-12 col-sm-12">
                                 <div class="card">
                                     <div class="card__content">
                                         <h4 class="faq__question">
-                                            آیا متخصص بدون هماهنگی با من در زمان مقرپر مراجعه میکند؟
+                                            چقدر زمان می‌بره تا تعمیرکار به محل من برسه؟
                                         </h4>
-
-
                                         <div class="faq__answer mt10">
-                                            خیر، تمامی متخصصان علاوه بر زمان حدودی که شما برای حضور آنها مشخص می کنید
-                                            حتما
-                                            قبل
-                                            از
-                                            مراجعه تماس گرفته و از حضور و آمادگی شما مطمئن خواهند شد.
+                                            پس از ثبت درخواست، نزدیک‌ترین تعمیرکار ظرف کمتر از ۲ ساعت (در تهران و کرج)
+                                            به محل شما اعزام می‌شود. در سایر شهرها هماهنگی سریع انجام خواهد شد.
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- سوال ۳ -->
                             <div class="col col-xl-12 col-sm-12">
                                 <div class="card">
                                     <div class="card__content">
                                         <h4 class="faq__question">
-                                            آیا متخصص بدون هماهنگی با من در زمان مقرپر مراجعه میکند؟
+                                            آیا قطعات استفاده‌شده در تعمیرات اصلی هستند؟
                                         </h4>
-
                                         <div class="faq__answer mt10">
-                                            خیر، تمامی متخصصان علاوه بر زمان حدودی که شما برای حضور آنها مشخص می کنید
-                                            حتما
-                                            قبل
-                                            از
-                                            مراجعه تماس گرفته و از حضور و آمادگی شما مطمئن خواهند شد.
+                                            بله، در صورت نیاز به تعویض قطعه، فقط از قطعات اصلی (اورجینال) استفاده می‌شود
+                                            که دارای گارانتی هستند.
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- سوال ۴ -->
                             <div class="col col-xl-12 col-sm-12">
                                 <div class="card">
                                     <div class="card__content">
                                         <h4 class="faq__question">
-                                            آیا متخصص بدون هماهنگی با من در زمان مقرپر مراجعه میکند؟
+                                            آیا خدمات تعمیر شامل گارانتی می‌شود؟
                                         </h4>
-
                                         <div class="faq__answer mt10">
-                                            خیر، تمامی متخصصان علاوه بر زمان حدودی که شما برای حضور آنها مشخص می کنید
-                                            حتما
-                                            قبل
-                                            از
-                                            مراجعه تماس گرفته و از حضور و آمادگی شما مطمئن خواهند شد.
+                                            بله، تمامی خدمات انجام‌شده دارای ضمانت ۳۰ تا ۹۰ روزه (بسته به نوع تعمیر)
+                                            هستند تا با خیال راحت از دستگاه خود استفاده کنید.
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- سوال ۵ -->
+                            <div class="col col-xl-12 col-sm-12">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <h4 class="faq__question">
+                                            اگر دستگاه قابل تعمیر نباشد، چه اتفاقی می‌افتد؟
+                                        </h4>
+                                        <div class="faq__answer mt10">
+                                            در صورتی که پس از بررسی، دستگاه قابل تعمیر نباشد یا هزینه آن به‌صرفه نباشد،
+                                            فقط هزینه کارشناسی از شما دریافت می‌شود و تصمیم نهایی با شماست.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال ۶ -->
+                            <div class="col col-xl-12 col-sm-12">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <h4 class="faq__question">
+                                            آیا بدون هماهنگی ممکنه تکنسین به محل بیاد؟
+                                        </h4>
+                                        <div class="faq__answer mt10">
+                                            خیر. تمامی تکنسین‌ها پیش از مراجعه با شما تماس می‌گیرند و فقط در زمانی که
+                                            شما تأیید کنید به محل اعزام می‌شوند.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <section class="mt10">
+        <!-- <section class="mt10">
             <div class="container">
                 <div class="col col-xl-12">
                     <h2 class="heading-2 text-center">
@@ -875,7 +887,7 @@
                     <div class="col col-xl-4 col-sm-12">
                         <div class="article__item">
                             <a>
-                                <img src="./static/images/samsungbanner3.jpg" alt="" class="article__img">
+                                <img src="./static/images/tamirmaster-logo.png" alt="" class="article__img">
                             </a>
 
                             <div class="article__header">
@@ -949,31 +961,34 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <div class="container">
             <div class="row">
+                <div class="col col-xl-12">
+                    <h2 class="heading-2 text-center">
+                        تعمیر لباسشویی در منزل
+                    </h2>
+                </div>
 
                 <div class="col col-xl-12">
                     <div class="img-fluid">
-                        <img src="./static/images/samsungbanner2.jpg" alt="">
+                        <img src="./static/images/tamirmaster-structure.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="col col-xl-12">
-                    <h2 class="heading-2 text-justify">
-                        تعمیر لباسشویی در منزل
-                    </h2>
 
-                    <p class="mt10">
-                        مرکز تخصصی تعمیرات ماشین لباسشوئی تعمیرمستر از بهترین و مجرب ترین متخصصین تشکیل شده است . همین
-                        امر
-                        موجب شده است بهترین خدمات به مشتریان ارائه شود.
 
-                        <br>
-                        در این مرکز ، سرویس انواع ماشین لباسشوئی به صورت کاملا حرفه ای و با قیمت مقرون به صرفه در سریع
-                        ترین
-                        زمان ممکن انجام می شود. لازم به ذکر است که تعمیر و سرویس لباسشوئی در منزل شما انجام می شود.
+                    <p class="mt10 text-center">
+                        مرکز تخصصی تعمیرات ماشین لباسشویی تعمیرمستر، با تیمی از بهترین و مجرب‌ترین تکنسین‌ها آماده ارائه
+                        خدمات حرفه‌ای به شما عزیزان است.
+                        ما با تعهد به کیفیت و سرعت، تعمیر و سرویس انواع ماشین لباسشویی را در منزل شما و با قیمت‌های
+                        منصفانه انجام می‌دهیم.
+                        با تعمیرمستر، دیگر نیازی به جابه‌جایی دستگاه ندارید؛ تیم ما در کوتاه‌ترین زمان ممکن، مشکل دستگاه
+                        شما را برطرف می‌کند تا خیالتان از عملکرد درست لباسشویی راحت باشد.
+
+                        برای دریافت خدمات تخصصی و سریع، همین حالا با ما تماس بگیرید!
                     </p>
 
                     <a href="./contact.html" class="btn"> تماس با ما</a>
@@ -987,13 +1002,13 @@
         <div class="container">
             <div class="row">
                 <div class="col col-xl-12">
-                    <a class="footer__to-top">
+                    <a class="btn btn--outline btn--info footer__to-top">
                         برگشت به بالا
                     </a>
                 </div>
 
                 <div class="col col-xl-12">
-                    <img class="footer__logo" src="./static/images/Anitamir.png" alt="">
+                    <img class="footer__logo" src="./static/images/tamirmaster-logo.png" alt="">
 
                     <h4 class="fg-white mt10">تعمیر تخصصی انواع لباسشویی در منزل</h4>
 
@@ -1061,7 +1076,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Just-validate CDN -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.min.js"></script>
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script type="module" src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/validation.js"></script>
+    <script src="assets/scripts/form-submission.js"></script>
+
+    <script>
+
+        // Example of using preloader for navigation
+        function navigateToPage(url) {
+            if (window.loaderUtils) {
+                window.loaderUtils.navigate(url);
+            }
+        }
+    </script>
 </body>
 
 </html>

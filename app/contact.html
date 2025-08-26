@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link href="image/icons/Anitamir.png" rel="shortcut icon" />
+    <link href="image/icons/tamirmaster-logo.png" rel="shortcut icon" />
 
     <link rel="stylesheet" href="assets//css/style.css">
 
@@ -176,7 +176,7 @@
 
                     <div class="col col-xl-4">
                         <div class="nav__logo float-left">
-                            <img src="./static//images/Anitamir-logo2.png" alt="">
+                            <img src="./static//images/tamirmaster-logo.png" alt="">
                         </div>
 
                         <div class="menu-icon">
@@ -202,7 +202,7 @@
 
         <div class="sidenav__logo">
             <div class="big-logo z-10">
-                <img src="./static//images/Anitamir-logo2.png" alt="">
+                <img src="./static//images/tamirmaster-logo.png" alt="">
             </div>
         </div>
         \
@@ -303,12 +303,9 @@
         <div class="container">
             <div class="mt100 fg-white">
                 <h2 class="heading-2 text-center">
-                    با تعمیرمستر تماس بگیرید </h2>
+                    تماس با تعمیرمستر </h2>
 
-                <h3 class="heading-sub text-center">در صورت نیاز به تعمیرات لباسشویی و تماس با ما از روش های زیر
-                    استفاده
-                    کنید
-                </h3>
+                <h3 class="heading-sub text-center">پاسخگو هستیم همه روزهای هفته</h3>
             </div>
         </div>
     </div>
@@ -340,10 +337,6 @@
         درخواست شما ارسال شد. در اسرع وقت با شما تماس گرفته می شود.
     </div> -->
 
-    <div class="loader-form">
-        <img src="images/loader.gif" alt="">
-    </div>
-
     <div class="container mt50">
         <h2 class="heading-3 text-center">فرم تماس</h2>
 
@@ -358,7 +351,7 @@
                     </div>
 
                     <div class="card__content">
-                        <form class="form">
+                        <form class="form" id="contact-form">
                             <div class="row">
                                 <div class="col col-xl-6 col-xs-12">
                                     <div class="control">
@@ -366,7 +359,8 @@
 
                                         <div class="control__field">
                                             <div class="control__wrapper">
-                                                <input type="text" class="control__input" placeholder="وارد کنید...">
+                                                <input type="text" name="fullName" class="control__input"
+                                                    placeholder="وارد کنید...">
                                             </div>
                                         </div>
                                     </div>
@@ -378,7 +372,8 @@
 
                                         <div class="control__field">
                                             <div class="control__wrapper">
-                                                <input type="number" class="control__input" placeholder="وارد کنید...">
+                                                <input type="number" name="mobile" class="control__input"
+                                                    placeholder="وارد کنید...">
                                             </div>
                                         </div>
                                     </div>
@@ -391,7 +386,7 @@
 
                                     <div class="textarea__field control__field">
                                         <div class="control__wrapper">
-                                            <textarea placeholder="وارد کنید ..."
+                                            <textarea name="description" placeholder="وارد کنید ..."
                                                 class="textarea__input control__input">
                                         </textarea>
                                         </div>
@@ -401,7 +396,9 @@
 
                                 <div class="col">
                                     <div class="control">
-                                        <a type="submit" class="btn btn--primary" onclick="submitForm(event)"> ارسال</a>
+                                        <button type="submit" class="btn btn--primary">
+                                            ارسال
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -422,7 +419,7 @@
                 </div>
 
                 <div class="col col-xl-12">
-                    <img class="footer__logo" src="./static//images/Anitamir-logo2.png" alt="">
+                    <img class="footer__logo" src="./static//images/tamirmaster-logo.png" alt="">
 
                     <h4 class="fg-white mt10">تعمیر تخصصی انواع لباسشویی در منزل</h4>
 
@@ -493,7 +490,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Just-validate CDN -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.min.js"></script>
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script type="module" src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/validation.js"></script>
+    <script src="assets/scripts/form-submission.js"></script>
 
 </body>
 

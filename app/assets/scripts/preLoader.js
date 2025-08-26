@@ -1,4 +1,160 @@
-//create loader
+// Preloader Management System
+class PreloaderManager {
+    constructor() {
+        this.loader = document.querySelector(".loader");
+        this.isLoading = false;
+        this.loadingQueue = 0;
+        this.init();
+    }
+
+    init() {
+        // Show loader on page load
+        this.show();
+        
+        // Listen for page load completion
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                this.hide();
+            }, 1000);
+        });
+
+        // Listen for navigation events
+        this.setupNavigationListeners();
+        
+        // Listen for AJAX requests
+        this.setupAjaxListeners();
+        
+        // Listen for image loading
+        this.setupImageListeners();
+    }
+
+    show() {
+        if (this.loader && !this.isLoading) {
+            this.isLoading = true;
+            this.loadingQueue++;
+            this.loader.style.display = 'flex';
+            gsap.to(this.loader, {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        }
+    }
+
+    hide() {
+        if (this.loader && this.isLoading) {
+            this.loadingQueue--;
+            if (this.loadingQueue <= 0) {
+                this.loadingQueue = 0;
+                this.isLoading = false;
+                gsap.to(this.loader, {
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        this.loader.style.display = 'none';
+                    }
+                });
+            }
+        }
+    }
+
+    setupNavigationListeners() {
+        // Listen for link clicks
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href && !link.href.startsWith('javascript:') && !link.href.startsWith('#')) {
+                const href = link.href;
+                const currentOrigin = window.location.origin;
+                
+                // Only show loader for same-origin navigation
+                if (href.startsWith(currentOrigin) || href.startsWith('/')) {
+                    this.show();
+                }
+            }
+        });
+
+        // Listen for browser back/forward
+        window.addEventListener('popstate', () => {
+            this.show();
+        });
+
+        // Listen for beforeunload
+        window.addEventListener('beforeunload', () => {
+            this.show();
+        });
+    }
+
+    setupAjaxListeners() {
+        // Override fetch
+        const originalFetch = window.fetch;
+        window.fetch = (...args) => {
+            this.show();
+            return originalFetch(...args)
+                .finally(() => {
+                    setTimeout(() => this.hide(), 500);
+                });
+        };
+
+        // Override XMLHttpRequest
+        const originalXHROpen = XMLHttpRequest.prototype.open;
+        const originalXHRSend = XMLHttpRequest.prototype.send;
+        
+        XMLHttpRequest.prototype.open = function(...args) {
+            this._isAjaxRequest = true;
+            return originalXHROpen.apply(this, args);
+        };
+        
+        XMLHttpRequest.prototype.send = function(...args) {
+            if (this._isAjaxRequest) {
+                window.preloaderManager.show();
+                this.addEventListener('loadend', () => {
+                    setTimeout(() => window.preloaderManager.hide(), 500);
+                });
+            }
+            return originalXHRSend.apply(this, args);
+        };
+    }
+
+    setupImageListeners() {
+        // Track image loading
+        const images = document.querySelectorAll('img');
+        let loadedImages = 0;
+        const totalImages = images.length;
+
+        if (totalImages > 0) {
+            images.forEach(img => {
+                if (img.complete) {
+                    loadedImages++;
+                } else {
+                    img.addEventListener('load', () => {
+                        loadedImages++;
+                        if (loadedImages === totalImages) {
+                            setTimeout(() => this.hide(), 300);
+                        }
+                    });
+                    img.addEventListener('error', () => {
+                        loadedImages++;
+                        if (loadedImages === totalImages) {
+                            setTimeout(() => this.hide(), 300);
+                        }
+                    });
+                }
+            });
+        }
+    }
+
+    // Method to manually show/hide loader
+    setLoading(loading) {
+        if (loading) {
+            this.show();
+        } else {
+            this.hide();
+        }
+    }
+}
+
+//create loader animations
 
 const liquidFront = document.querySelector(".liquidFront");
 const liquidBack = document.querySelector(".liquidBack");
@@ -327,3 +483,11 @@ function doRepeat(bubble) {
 function getBetweenVal(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+// Initialize preloader manager
+window.preloaderManager = new PreloaderManager();
+
+// Global function to manually control preloader
+window.showPreloader = () => window.preloaderManager.show();
+window.hidePreloader = () => window.preloaderManager.hide();
+window.setPreloaderLoading = (loading) => window.preloaderManager.setLoading(loading);

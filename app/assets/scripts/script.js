@@ -20,38 +20,38 @@ if (toTopbutton) {
 
 let popup = document.querySelector(".popuop-flash");
 
-async function submitForm(e) {
-  document.querySelector(".loader-form").style.display = "flex";
+// async function submitForm(e) {
+//   document.querySelector(".loader-form").style.display = "flex";
 
-  let form = e.target.parentElement;
-  let data = new FormData(form);
+//   let form = e.target.parentElement;
+//   let data = new FormData(form);
 
-  let result = await axios.post("http://localhost:8080", {
-    fullName: data.get("fullName"),
-    phoneNumber: data.get("phoneNumber"),
-    description: data.get("description"),
-  });
-  console.log(result.data);
+//   let result = await axios.post("http://localhost:8080", {
+//     fullName: data.get("fullName"),
+//     phoneNumber: data.get("phoneNumber"),
+//     description: data.get("description"),
+//   });
+//   console.log(result.data);
 
-  if (result) {
-    popup.innerHTML = result.data.msg;
+//   if (result) {
+//     popup.innerHTML = result.data.msg;
 
-    if (result.data.success) {
-      popup.classList.add("success");
-    } else {
-      popup.classList.add("danger");
-    }
+//     if (result.data.success) {
+//       popup.classList.add("success");
+//     } else {
+//       popup.classList.add("danger");
+//     }
 
-    document.querySelector(".loader-form").style.display = "none";
-    popup.style.opacity = 1;
-    popup.style.visibility = "visible";
-  }
+//     document.querySelector(".loader-form").style.display = "none";
+//     popup.style.opacity = 1;
+//     popup.style.visibility = "visible";
+//   }
 
-  setTimeout(() => {
-    popup.style.opacity = 0;
-    popup.style.visibility = "hidden";
-  }, 3000);
-}
+//   setTimeout(() => {
+//     popup.style.opacity = 0;
+//     popup.style.visibility = "hidden";
+//   }, 3000);
+// }
 
 const reviewButton = document.querySelector(".review__button");
 
@@ -92,55 +92,55 @@ const validateEmail = (email) => {
   );
 };
 
-async function sendReview(e) {
-  document.querySelector(".loader-form").style.display = "flex";
+// async function sendReview(e) {
+//   document.querySelector(".loader-form").style.display = "flex";
 
-  let form = e.target.parentElement;
-  let data = new FormData(form);
+//   let form = e.target.parentElement;
+//   let data = new FormData(form);
 
-  if (!validateEmail(data.get("email"))) {
-    document.querySelector(".loader-form").style.display = "none";
+//   if (!validateEmail(data.get("email"))) {
+//     document.querySelector(".loader-form").style.display = "none";
 
-    popup.innerHTML = "یک ایمیل معتبر وارد کنید.";
-    popup.classList.add("danger");
+//     popup.innerHTML = "یک ایمیل معتبر وارد کنید.";
+//     popup.classList.add("danger");
 
-    popup.style.opacity = 1;
-    popup.style.visibility = "visible";
+//     popup.style.opacity = 1;
+//     popup.style.visibility = "visible";
 
-    setTimeout(() => {
-      popup.style.opacity = 0;
-      popup.style.visibility = "hidden";
-    }, 3000);
+//     setTimeout(() => {
+//       popup.style.opacity = 0;
+//       popup.style.visibility = "hidden";
+//     }, 3000);
 
-    return;
-  } else {
-    console.log("oh cool");
-  }
+//     return;
+//   } else {
+//     console.log("oh cool");
+//   }
 
-  let result = await axios.post("http://localhost:8080/review", {
-    fullName: data.get("fullName"),
-    email: data.get("email"),
-    location: data.get("location"),
-    description: data.get("description"),
-    stars: starValue,
-  });
+//   let result = await axios.post("http://localhost:8080/review", {
+//     fullName: data.get("fullName"),
+//     email: data.get("email"),
+//     location: data.get("location"),
+//     description: data.get("description"),
+//     stars: starValue,
+//   });
 
-  if (result) {
-    popup.innerHTML = result.data.msg;
+//   if (result) {
+//     popup.innerHTML = result.data.msg;
 
-    if (result.data.success) {
-      popup.classList.add("success");
-    } else {
-      popup.classList.add("danger");
-    }
+//     if (result.data.success) {
+//       popup.classList.add("success");
+//     } else {
+//       popup.classList.add("danger");
+//     }
 
-    document.querySelector(".loader-form").style.display = "none";
-    popup.style.opacity = 1;
-    popup.style.visibility = "visible";
-  }
+//     document.querySelector(".loader-form").style.display = "none";
+//     popup.style.opacity = 1;
+//     popup.style.visibility = "visible";
+//   }
 
-  setTimeout(() => {
-    popup.style.opacity = 0;
-    popup.style.visibility = "hidden";
-  }, 3000);
-}
+//   setTimeout(() => {
+//     popup.style.opacity = 0;
+//     popup.style.visibility = "hidden";
+//   }, 3000);
+// }
