@@ -1,6 +1,5 @@
-import JustValidate from "just-validate";
-
 // Form validation using just-validate
+// Make sure JustValidate library is loaded before this script
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector("#contact-form");
 

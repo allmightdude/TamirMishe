@@ -12,21 +12,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>مرکز تخصصی تعمیرات ماشین لباسشویی</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link href="image/icons/tamirmaster-logo.png" rel="shortcut icon" />
 
-    <link rel="stylesheet" href="assets//css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/icons.css">
 </head>
 
 <body>
     <!------------------start preloader-------------------->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="landry">
             <div class="buttons-wash">
                 <div class="empty"></div>
@@ -97,11 +95,11 @@
              M37.4,9c2.1-2.1,4.2-4.2,6.3-6.3 M2,44.4c2.2-2.2,4.5-4.5,6.7-6.7 M37.4,37.4c2.1,2.1,4.2,4.2,6.3,6.3 M2,2c2.2,2.2,4.5,4.5,6.7,6.7
              " />
                     </g>
-                    <!--
- 
-                 path class="flask" opacity="1" fill="none" stroke="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="		M379.2,108.2l-20.5,20.5l0.1,126.3h0.2c39.7,21,66.7,62.9,66.7,111c0,69.4-56.3,125.7-125.7,125.7S174.3,435.4,174.3,366
-                 c0-48.1,27.1-89.9,66.8-111l0.1-126.3l-20.5-20.5"/  
- -->
+
+                    path class="flask" opacity="1" fill="none" stroke="none" stroke-width="10" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" d="
+                    M379.2,108.2l-20.5,20.5l0.1,126.3h0.2c39.7,21,66.7,62.9,66.7,111c0,69.4-56.3,125.7-125.7,125.7S174.3,435.4,174.3,366
+                    c0-48.1,27.1-89.9,66.8-111l0.1-126.3l-20.5-20.5"/
                     <radialGradient id="shine" cx="280" cy="337" r="100" gradientUnits="userSpaceOnUse">
 
                         <stop offset="0.02" style="stop-color:#fff;stop-opacity:0.2" />
@@ -116,25 +114,11 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <!------------------end preloader---------------------->
 
     <!-- START NAVBAR -->
     <div class="nav">
-        <!-- <div class="nav__top">
-            <div class="container">
-                <div class="row row--no-gutter">
-                    <div class="col col-xl-6">
-                        <div class="nav__top--numbers">
-                            <span class="nav__top--numbers-item">09369236420</span>
-
-                            <span class="nav__top--numbers-item">09369236420</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="nav__bottom">
             <div class="container">
                 <div class="row row--no-gutter">
@@ -298,7 +282,11 @@
 
                         <a href="./contact.html" class="btn btn--primary mt10">
                             تماس با ما
-                        </a>
+
+                            <i class="icon-add">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                            </i> </a>
 
                         <h4 class="heading-sub mt10">
                             برای تعمیر لباسشویی خود در کمترین زمان با ما تماس بگیرید
@@ -442,13 +430,13 @@
                     </div>
                 </div>
 
-                <div class="alert alert--info alert--dense alert--flat mt20 text-center">
+                <div class="alert alert--info alert--dense mt20 text-center">
                     <h4>
                         خدمات تخصصی تعمیرات ماشین لباسشویی در منزل
                     </h4>
                 </div>
 
-                <div class="alert alert--success alert--dense alert--flat mt20 text-center">
+                <div class="alert alert--success alert--dense mt20 text-center">
                     <h4>
                         همین حالا درخواست تعمیر لباسشویی خود را ثبت کنید و از خدمات سریع و مطمئن بهره‌مند شوید!
                     </h4>
@@ -648,9 +636,14 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">1</div>
-                                <div>
+                               
+                                <div class="flex">
+                                    <div class="levels__number">
+                                        <img src="/static/icons/handyman-icon.svg" alt="Happy Customer Icon" >
+                                    </div>
+                                    
                                     <h3 class="mt10">متخصصان باتجربه</h3>
+
                                     <p class="levels__text mt10">
                                         تمامی تکنسین‌های ما دوره‌دیده و باتجربه در زمینه تعمیر تخصصی انواع ماشین
                                         لباسشویی هستند؛ برندهای ایرانی و خارجی را با دقت بالا در منزل شما تعمیر می‌کنیم.
@@ -668,7 +661,12 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">2</div>
+                                <div class="levels__number">
+                                    <i class="icon-flash">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </div>
                                 <div>
                                     <h3 class="mt10">سرعت در خدمات</h3>
                                     <p class="levels__text mt10">
@@ -688,7 +686,12 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">3</div>
+                                <div class="levels__number">
+                                    <i class="icon-user-octagon">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </div>
                                 <div>
                                     <h3 class="mt10">گارانتی خدمات</h3>
                                     <p class="levels__text mt10">
@@ -708,7 +711,12 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">4</div>
+                                <div class="levels__number">
+                                    <i class="icon-money-tick">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </div>
                                 <div>
                                     <h3 class="mt10">هزینه‌های منصفانه</h3>
                                     <p class="levels__text mt10">
@@ -728,7 +736,12 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">5</div>
+                                <div class="levels__number">
+                                    <i class="icon-settings">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </div>
                                 <div>
                                     <h3 class="mt10">تعمیر به‌جای تعویض</h3>
                                     <p class="levels__text mt10">
@@ -748,7 +761,12 @@
                     <div class="card">
                         <div class="card__content">
                             <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">6</div>
+                                <div class="levels__number">
+                                    <i class="icon-star">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </div>
                                 <div>
                                     <h3 class="mt10">استفاده از قطعات اصلی</h3>
                                     <p class="levels__text mt10">
@@ -1007,7 +1025,7 @@
                     </a>
                 </div>
 
-                <div class="col col-xl-12">
+                <div class="col col-xl-6">
                     <img class="footer__logo" src="./static/images/tamirmaster-logo.png" alt="">
 
                     <h4 class="fg-white mt10">تعمیر تخصصی انواع لباسشویی در منزل</h4>
@@ -1038,12 +1056,11 @@
                         <li>
                             <a href="" class="footer__link">درباره ی ما</a>
                         </li>
-
                     </ul>
                 </div>
 
 
-                <div class="col col-xl-3">
+                <!-- <div class="col col-xl-3">
                     <h4 class="fg-white">ما را دنبال کنید</h4>
 
                     <div class="social d-flex">
@@ -1065,7 +1082,7 @@
 
                         <p> anitamir@yahoo.com </p>
                     </div>
-                </div>
+                </di-->
             </div>
         </div>
     </section>
@@ -1085,16 +1102,6 @@
     <script type="module" src="assets/scripts/index.js"></script>
     <script src="assets/scripts/validation.js"></script>
     <script src="assets/scripts/form-submission.js"></script>
-
-    <script>
-
-        // Example of using preloader for navigation
-        function navigateToPage(url) {
-            if (window.loaderUtils) {
-                window.loaderUtils.navigate(url);
-            }
-        }
-    </script>
 </body>
 
 </html>

@@ -4,7 +4,9 @@
   background-color: color("secondary", "base");
 
   &__link {
-    color: white;
+    color: rgb(235, 235, 235);
+    font-weight: 300;
+    font-size: 1.2rem;
   }
 
   &__logo {

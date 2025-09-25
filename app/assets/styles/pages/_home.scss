@@ -141,10 +141,17 @@
     height: 6rem;
     border-radius: 50%;
     line-height: 6rem;
-    position: absolute;
-    top: -3rem;
     text-align: center;
-    border: 4px solid color("primary", "base");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+
+    img{
+      width: 80%;
+      height: 80%;
+    }
   }
 
   &__text {

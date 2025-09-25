@@ -1,6 +1,7 @@
-import JustValidate from "just-validate";
+// Validation helper using JustValidate
+// Make sure to include JustValidate library before this script
 
-export const createValidator = (formSelector, rules) => {
+const createValidator = (formSelector, rules) => {
   const validator = new JustValidate(formSelector);
 
   rules.forEach(({ field, validations }) => {
@@ -9,3 +10,6 @@ export const createValidator = (formSelector, rules) => {
 
   return validator;
 };
+
+// Make function available globally
+window.createValidator = createValidator;

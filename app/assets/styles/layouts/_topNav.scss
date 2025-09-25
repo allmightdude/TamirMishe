@@ -85,6 +85,17 @@
     svg {
       fill: white;
     }
+
+    &__item {
+      margin-left: 1rem;
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+
+      svg {
+        width: 100%;
+      }
+    }
   }
 
   .btn-contact {
