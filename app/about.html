@@ -12,13 +12,16 @@
     <meta name="viewport" content="width=device-width" />
     <title>مرکز تخصصی تعمیرات ماشین لباسشویی</title>
 
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link href="image/icons/tamirmaster-logo.png" rel="shortcut icon" />
 
     <link rel="stylesheet" href="assets//css/style.css">
+
+    <!-- Critical CSS for FOUC prevention -->
+    <link rel="stylesheet" href="assets/css/critical.css">
+
+    <script type="module" src="/main.js"></script>
 
 </head>
 
@@ -26,7 +29,6 @@
     <!------------------start preloader-------------------->
 
     <!------------------end preloader---------------------->
-
 
     <!-- START NAVBAR -->
     <div class="nav">
@@ -40,57 +42,50 @@
                             <span class="nav__top--numbers-item">09369236420</span>
                         </div>
                     </div>
+
+                    <div class="col col-xl-6">
+                        <div class="nav__top--socials">
+                            <a href="" class="nav__top--socials-item">
+                                <i class="icon-instagram"></i>
+                            </a>
+
+                            <a href="" class="nav__top--socials-item">
+                                <i class="icon-telegram"></i>
+                            </a>
+
+                            <a href="" class="nav__top--socials-item">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="nav__bottom">
-        <div class="container">
-            <div class="row row--no-gutter">
-                <div class="col col-xl-8">
-                    <ul class="nav__menu">
-                        <li class="nav__menu-item">
-                            <a href="" class="nav__link">صفحه اصلی</a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="" class="nav__link">
-                                <span>
-                                    نمایندگی ها
-                                </span>
+        <div class="nav__bottom">
+            <div class="container">
+                <div class="row row--no-gutter">
+                    <div class="col col-xl-8">
+                        <ul class="nav__menu">
+                            <li class="nav__menu-item">
+                                <a href="" class="nav__link">صفحه اصلی</a>
+                            </li>
 
-                                <ul class="nav__link--submenu">
-                                    <li>menu test 1</li>
-                                    <li>menu test 2</li>
-                                    <li>menu test 3</li>
-                                    <li>menu test 4</li>
-                                    <li>menu test 5</li>
-                                </ul>
-                            </a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="" class="nav__link">مقالات </a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="" class="nav__link">تماس با ما</a>
-                        </li>
+                            <li class="nav__menu-item">
+                                <a href="" class="nav__link">تماس با ما</a>
+                            </li>
 
-                        <li class="nav__menu-item">
-                            <a href="./contact.html" class="btn btn--primary">گزارش تعمیر </a>
-                        </li>
-                    </ul>
+                            <li class="nav__menu-item">
+                                <a href="tel:+989016839559" class="btn btn--primary">گزارش تعمیر </a>
+                            </li>
+                        </ul>
 
-                </div>
-
-                <div class="col col-xl-4">
-                    <div class="nav__logo float-left">
-                        <img src="./static//images/tamirmaster-logo.png" alt="">
                     </div>
 
-                    <div class="menu-icon">
-                        <svg>
-                            <use xlink:href="./static//images/sprite.svg#icon-menu"></use>
-                        </svg>
+                    <div class="col col-xl-4">
+                        <div class="nav__logo float-left">
+                            <img src="./static/images/tamirmaster-logo.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,617 +93,65 @@
     </div>
     <!-- END NAVBAR -->
 
-
-    <!-- START SIDENAV -->
-    <div class="sidenav">
-        <div class="close-icon">
-            <svg class="clear-icon">
-                <use xlink:href="./static//images/sprite.svg#icon-clear"></use>
-            </svg>
-        </div>
-
-        <div class="sidenav__logo">
-            <div class="big-logo z-10">
-                <img src="./static//images/tamirmaster-logo.png" alt="">
-            </div>
-        </div>
-        \
-        <ul class="sidenav__menu">
-            <li class="sidenav__menu-item">
-                <a class="sidenav__link">
-                    صفحه اصلی
-                </a>
-            </li>
-
-            <li class="sidenav__menu-item">
-                <div class="d-flex ai-c jc-sw col-12">
-                    <a class="sidenav__link d-flex ai-c jc-sw">
-                        نمایندگی ها
-
-                        <svg class="down-icon">
-                            <use xlink:href="./static//images/sprite.svg#icon-angle-down"></use>
-                        </svg>
-                    </a>
-
-
+    <!-- START MAIN CONTENT -->
+    <main class="main">
+        <div class="container">
+            <h1 class="heading-1 text-center">درباره ما</h1>
+            <p class="text-1 text-center">مرکز تخصصی تعمیرات ماشین لباسشویی</p>
+            
+            <div class="row">
+                <div class="col col-xl-6">
+                    <h2 class="heading-2">تاریخچه شرکت</h2>
+                    <p class="text-3">
+                        ما با بیش از 10 سال تجربه در زمینه تعمیرات ماشین لباسشویی، 
+                        یکی از معتبرترین مراکز تخصصی در این حوزه هستیم. 
+                        تیم متخصص ما آماده ارائه بهترین خدمات به شما عزیزان می باشد.
+                    </p>
                 </div>
-
-                <ul class="sidenav__submenu">
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li class="sidenav__menu-item">
-                <a href="" class="sidenav__link">
-                    مقالات
-                </a>
-                <ul class="sidenav__submenu">
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="sidenav__menu-item">
-                <a href="./contact.html" class="sidenav__link">
-                    تماس با ما
-                </a>
-            </li>
-
-
-        </ul>
-
-        <div class="sidenav__footer">
-            <div class="sidenav__footer-item">
-                <span>شماره تماس</span>
-                <div class="contact-numbers">
-                    <a class="btn btn--secnodary mt10">09369236420</a>
-
-                    <a class="btn btn--secnodary mt10">09369236420</a>
-                </div>
-            </div>
-
-            <div class="sidenav__footer-item mt10">
-                <div class="email d-flex ai-c">
-                    <span>ایمیل : </span>
-                    <p> anitamir@yahoo.com </p>
+                
+                <div class="col col-xl-6">
+                    <h2 class="heading-2">ماموریت ما</h2>
+                    <p class="text-3">
+                        هدف ما ارائه خدمات با کیفیت و سریع به مشتریان عزیز است. 
+                        ما متعهد به استفاده از بهترین قطعات و تجهیزات روز دنیا هستیم.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- END SIDENAV -->
-
-    <div class="container">
-        <div class="row row--no-gutter mt50">
-            <div class="col col-xl-8 col-sm-12">
-                <h1 class="heading-2">
-                    درباره ی تعمیرمستر
-                </h1>
-
-                <h2 class="heading-3">آیا ماشین لباشویی شما به درستی کار نمی کند؟ با کارشناسان ما تماس بگیرید</h2>
-
-                <hr class="divider" />
-
-
-                <main class="article-main mt20">
-                    <p>
-                        اگرماشین لباسشویی شما به درستی کار نمی کند، با متخصصین تعمیرمستر تماس بگیرید. ما اینجا هستیم تا
-                        خدمات حرفه ای و مقرون به صرفه ای را که طبق برنامه شما انجام می شود به شما ارائه دهیم. وقتی شما
-                        به ما نیاز داشته باشین، ما اینجاییم! تکنسین های ما مودب هستند و بسیار با تجربه هستند. ما همچنین
-                        قبل از شروع هر کاری قیمت اولیه را به شما ارائه می دهیم تا هیچ شگفتی در صورتحساب نهایی شما وجود
-                        نداشته باشد. اگر می خواهید در مورد خدماتی که ما ارائه می دهیم بیشتر بدانید، با ما تماس بگیرید!
-                    </p>
-
-                    <p>
-                        تعمیرمستر با بیش ۱۰ سال تجربه در زمینه ی تعمیرلات لباسشویی،خدمات کاملی را در تعمیر انواع ماشین
-                        لباسشویی اراوه می دهد.
-                    </p>
-
-                    <P>
-                        تعمیرمستر با نمایندگی و تعمیرات بیش از ده برند برتر لباسشویی جامعه ای ز متخصصان تعمیر انواع
-                        ماشین لباسشویی را ارائه می دهد.
-                    </P>
-
-                    <h3 class="heading-3 mt20">ماموریت ما</h3>
-
-                    <p>
-                        ایجاد تجربیاتی که مشتریان بی صبرانه منتظر باشیند ما را به دیگر دوستان خود معرفی کنند..
-                    </p>
-
-                    <h3 class="heading-3 mt20">چشم انداز</h3>
-
-                    <p>
-                        مرکز تعمیرات لباسشویی که به یکپارچگی و قابل اطمینان بودن شهرت دارد.
-                    </p>
-
-
-                    <h3 class="heading-3 mt20">ارزش های ما</h3>
-
-                    <h4>
-                        احترام متقابل
-                    </h4>
-
-                    <hr class="divider" />
-
-                    <ul class="article-main-list">
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            با دیگران آن گونه رفتار کنیم که دوست داریم با ما رفتار شود.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            گوش دادن به قصد درک آنچه گفته می شود و اذعان به اینکه آنچه گفته می شود برای گوینده مهم است.
-
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            پاسخگویی به موقع
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            آرام و محترمانه و بدون فحاشی و کنایه صحبت کردن.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            صدای دستگاه در چرخه چرخش به طور غیر طبیعی بلند است
-                        </li>
-                    </ul>
-
-                    <h4 class="mt10">
-                        تمامیت
-                    </h4>
-
-                    <hr class="divider" />
-
-                    <ul class="article-main-list">
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            تنها با بستن قراردادهایی که مایل، قادر و قصد انجام آن هستیم.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            انتقال هرگونه توافق بالقوه اجرا نشده در اولین فرصت مناسب به همه طرف های ذینفع.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            به دنبال یک روش برای اصلاح و پیشنهاد همه راه حل های ممکن اگر نیاز به تعمیرات لباسشویی هست.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            عملکرد به شیوه ای مسئولانه.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            برقراری ارتباط صادقانه و هدفمند.
-                        </li>
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            در صورت مخالفت یا درک نکردن، سؤالات روشنگری می‌پرسیم.
-                        </li>
-                    </ul>
-
-                    <h4 class="mt10">
-                        تمرکز بر مشتری
-                    </h4>
-
-                    <hr class="divider" />
-
-                    <ul class="article-main-list">
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            تلاش مستمر برای به حداکثر رساندن وفاداری مشتریان داخلی و خارجی
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            بهترین تلاش خود را برای درک نیازهای مشتری در هر شرایطی انجام می دهیم.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            به دنبال یک روش برای اصلاح و پیشنهاد همه راه حل های ممکن اگر نیاز به تعمیرات لباسشویی هست.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            عملکرد به شیوه ای مسئولانه.
-                        </li>
-
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            برقراری ارتباط صادقانه و هدفمند.
-                        </li>
-
-                        <li class="article-main-list--item">
-                            <svg class="check-icon">
-                                <use xlink:href="static/images/sprite.svg#icon-check"></use>
-                            </svg>
-                            در صورت مخالفت یا درک نکردن، سؤالات روشنگری می‌پرسیم.
-                        </li>
-
-                    </ul>
-
-                    <h3 class="heading-3 mt30">
-                        مرکز تعمیرات لباسشویی که به یکپارچگی و قابل اطمینان بودن شهرت دارد.
-                    </h3>
-
-
-                    <div class="text-justify mt30 v-alert v-alert--info">
-                        <p class="v-alert__text">
-                            مهمتر از آن، ما با لذت بردن در این فرآیند زندگی می کنیم! برای کسب اطلاعات بیشتر،
-                            همین امروز
-                            با تیم ما تماس بگیرید.
-                        </p>
-
-                        <div class="mt20">
-                            <a class="btn btn--secnodary btn--outline btn--medium btn--inline">09369236420</a>
-
-                            <a class="btn btn--secnodary btn--outline btn--medium btn--inline">09369236420</a>
-                        </div>
-                    </div>
-
-
-                    <ul class="article-main__tags mt10">
-                        <li class="article-main__tags-item">
-                            پیش بینی قیمت
-                        </li>
-
-                        <li class="article-main__tags-item">
-                            پیش بینی قیمت
-                        </li>
-
-                        <li class="article-main__tags-item">
-                            پیش بینی قیمت
-                        </li>
-
-                        <li class="article-main__tags-item">
-                            پیش بینی قیمت
-                        </li>
-                    </ul>
-
-
-                    <div class="subject-related mt30">
-                        <h4>مطالب مرتبط
-                        </h4>
-                        <ul>
-                            <li>
-                                <a href="">تعمیرمستر ، نمایندگی مجاز تعمیرات لباسشویی سامسونگ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">تعمیرات لباسشویی در منزل
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </main>
-            </div>
-
-            <div class="col col-xl-4 col-sm-12">
-                <aside>
-                    <div class="reviewPannel swiper text-center">
-                        <div class="swiper-wrapper">
-                            <div class=" swiper-slide text-center">
-                                <div class="reviewPannel__stars mt50">
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-                                </div>
-
-                                <p class="fg-white text-7 p10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
-                                </p>
-
-                                <div class="reviewPannel__name fg-primary">
-                                    جعفرپناهی
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide text-center">
-                                <div class="reviewPannel__stars mt50">
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-
-                                </div>
-
-                                <p class="fg-white text-7 p10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
-                                </p>
-
-                                <div class="reviewPannel__name fg-primary">
-                                    جعفرپناهی
-                                </div>
-                            </div>
-
-                            <div class=" swiper-slide text-center">
-                                <div class="reviewPannel__stars mt50">
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star1"></use>
-                                    </svg>
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-                                    <svg class="star-o-icon">
-                                        <use xlink:href="static/images/sprite.svg#icon-star_outline"></use>
-                                    </svg>
-                                </div>
-
-                                <p class="fg-white text-7 p10">
-                                    نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی
-                                    شوم
-                                    زیرا می دانم با چه کسی تماس بگیرم!
-                                </p>
-
-                                <div class="reviewPannel__name fg-primary">
-                                    جعفرپناهی
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-pagination"></div>
-                    </div>
-
-                    <div class="bg-light infoPannel p20 mt10">
-                        <h4>تعمیرمستر</h4>
-
-                        <p class="text-light text-6">
-                            مرکز تخصصی تعمیرات ماشین لباسشوئی تعمیرمستر از بهترین و مجرب ترین متخصصین تشکیل شده است .
-                            همین امر موجب شده است بهترین خدمات به مشتریان ارائه شود.
-                        </p>
-
-                        <a href="" class="btn btn--medium btn--primary mt20">تماس با ما
-                        </a>
-                    </div>
-
-
-                    <div class="bg-light infoPannel mt10 p20">
-                        <h4>چرا تعمیرمستر </h4>
-
-                        <ul class="infoPannel__list mt20">
-                            <li class="infoPannel__item">
-                                <a href="" class="infoPannel__link">
-                                    کارشناسان واجد شرایط
-                                </a>
-                            </li>
-
-                            <li class="infoPannel__item">
-                                <a href="/qualified.html" class="infoPannel__link">
-                                    گارانتی کار و قطعات
-                                </a>
-                            </li>
-
-                            <li class="infoPannel__item">
-                                <a href="/upfront-pricing.html" class="infoPannel__link">
-                                    پیش بینی قیمت
-                                </a>
-                            </li>
-
-                            <li class="infoPannel__item">
-                                <a href="" class="infoPannel__link">
-                                    تکنسین های مودب و متحدالشکل
-                                </a>
-                            </li>
-
-                            <li class="infoPannel__item">
-                                <a href="" class="infoPannel__link">
-                                    خدمات طبق برنامه شما
-
-                                </a>
-                            </li>
-
-                            <li class="infoPannel__item">
-                                <a href="" class="infoPannel__link">
-                                    در دسترس بودن
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </div>
-    </div>
-
-    <section class="footer">
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- START FOOTER -->
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col col-xl-12">
-                    <a class="footer__to-top">
-                        برگشت به بالا
-                    </a>
+                <div class="col col-xl-4">
+                    <h3 class="heading-3">تماس با ما</h3>
+                    <p class="text-3">09369236420</p>
+                    <p class="text-3">info@tamirmaster.com</p>
                 </div>
-
-                <div class="col col-xl-12">
-                    <img class="footer__logo" src="./static//images/tamirmaster-logo.png" alt="">
-
-                    <h4 class="fg-white mt10">تعمیر تخصصی انواع لباسشویی در منزل</h4>
-
-                    <p class="fg-white mt10">با ما تماس بگیرید:
-                    </p>
-
-                    <a class="btn btn--primary weight-800 mt10">09369236420
-                    </a>
+                
+                <div class="col col-xl-4">
+                    <h3 class="heading-3">ساعات کاری</h3>
+                    <p class="text-3">شنبه تا پنجشنبه: 8 صبح تا 8 شب</p>
+                    <p class="text-3">جمعه: 10 صبح تا 6 عصر</p>
                 </div>
-
-                <div class="col col-xl-3">
-                    <h4 class="fg-white">لینک های سریع</h4>
-
-                    <ul>
-                        <li>
-                            <a href="" class="footer__link">مناطق مورد پوشش</a>
-                        </li>
-
-                        <li>
-                            <a href="" class="footer__link">سوالات متدوال</a>
-                        </li>
-
-                        <li>
-                            <a href="" class="footer__link">تماس با ما</a>
-                        </li>
-
-                        <li>
-                            <a href="" class="footer__link">درباره ی ما</a>
-                        </li>
-
+                
+                <div class="col col-xl-4">
+                    <h3 class="heading-3">خدمات ما</h3>
+                    <ul class="unorder-list">
+                        <li>تعمیر ماشین لباسشویی</li>
+                        <li>تعمیر خشک کن</li>
+                        <li>تعمیر ماشین ظرفشویی</li>
                     </ul>
-                </div>
-
-
-                <div class="col col-xl-3">
-                    <h4 class="fg-white">ما را دنبال کنید</h4>
-
-                    <div class="social d-flex">
-                        <div class="social__item mr10">
-                            <svg class="instagram-icon">
-                                <use xlink:href="./static//images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-
-                        <div class="social__item mr10">
-                            <svg class="instagram-icon">
-                                <use xlink:href="./static//images/sprite.svg#icon-paper-plane"></use>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="fg-white">
-                        <span>ایمیل : </span>
-
-                        <p> anitamir@yahoo.com </p>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="copyright"></section>
-
-    <script src="static/js/gsap.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script type="module" src="assets/scripts/index.js"></script>
+    </footer>
+    <!-- END FOOTER -->
 
 </body>
 
 </html>
+
+

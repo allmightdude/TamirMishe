@@ -13,110 +13,18 @@
     <title>مرکز تخصصی تعمیرات ماشین لباسشویی</title>
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="static/icons/handyman-icon.svg" rel="shortcut icon" />
 
-    <link href="image/icons/tamirmaster-logo.png" rel="shortcut icon" />
+    <!-- Critical CSS for FOUC prevention -->
+    <link rel="stylesheet" href="assets/css/critical.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS will be injected by Vite from SCSS compilation -->
 
-    <link rel="stylesheet" href="assets/css/icons.css">
+    <!-- Vite will handle CSS compilation and injection -->
+    <script type="module" src="/main.js"></script>
 </head>
 
 <body>
-    <!------------------start preloader-------------------->
-    <!-- <div class="loader">
-        <div class="landry">
-            <div class="buttons-wash">
-                <div class="empty"></div>
-
-                <div class="circle-button"></div>
-
-                <div class="circle-button"></div>
-            </div>
-
-            <div class="loader__light mt40">
-                <div class="loader__light-line"></div>
-                <div class="loader__light-line"></div>
-                <div class="loader__light-line"></div>
-            </div>
-
-            <div class="door">
-                <svg class="labSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                    <defs>
-                        <linearGradient id="frontGrad" gradientUnits="userSpaceOnUse" x1="300" y1="100" x2="300"
-                            y2="600">
-                            <stop offset="0.5" style="stop-color:#005DE9" />
-                            <stop offset="0.8" style="stop-color:#0ca4ff" />
-                        </linearGradient>
-                        <mask id="liquidMask">
-                            <path class="liquidMask" fill="#0ca4ff" d="M337,273.9V129h-74v144.8c-37,14.7-63.1,50.8-63.1,93c0,55.2,44.8,100,100,100
-                 s100-44.8,100-100C400,324.7,373.9,288.6,337,273.9z" />
-                        </mask>
-                        <clipPath id="sphereMask">
-                            <circle fill="#0ca4ff" stroke="none" stroke-width="0.4957" stroke-miterlimit="10" cx="300"
-                                cy="367" r="100" />
-                        </clipPath>
-                        <filter id="goo" color-interpolation-filters="sRGB">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="7 7" result="blur" />
-                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -7"
-                                result="cm" />
-
-                            <feComposite in="SourceGraphic" in2="cm" />
-                        </filter>
-                    </defs>
-                    <g class="liquidMaskGroup" clip-path="url(#sphereMask)">
-                        <path class="liquidBack" fill="#0063d8" d="M1199.9,365.1c-41.8,0-79.4,9.8-107.4,8.1c-38.9-2.3-54.5-16.4-83.6-19.9
-             c-29.1-3.5-71.5,3.4-110.4,1c-28-1.7-56.4-13.7-98.2-13.7c-41.8,0-70.2,12-98.2,13.7c-38.9,2.3-81.4-4.6-110.4-1
-             c-29.1,3.5-44.7,17.5-83.6,19.9c-28,1.7-65.7-8.2-107.5-8.2c-41.8,0-79.5,9.9-107.5,8.2c-38.9-2.3-54.5-16.3-83.6-19.9
-             c-29.1-3.5-72,3.4-110.9,1c-28-1.7-56.7-13.7-98.7-13.7V438h1200L1199.9,365.1z" />
-                        <g class="liquidBubblesGroup" fill="#0ca4ff" clip-path="url(#sphereMask)">
-                            <path class="liquidFront" fill="#0ca4ff"
-                                d="M1199.9,329.6c-44,0-70.6,29.4-96.4,33c-36.1,5.1-70.7-14.5-106.8-9.4	c-25.8,3.7-52.4,33.3-96.4,33.3c-44,0-70.7-29.7-96.4-33.4c-36.1-5.1-70.7,14.4-106.8,9.2c-25.8-3.7-52.4-33.3-96.5-33.3	c-44,0-70.7,29.7-96.5,33.3c-36.1,5.1-70.7-14.4-106.8-9.3c-25.8,3.7-52.4,33.3-96.5,33.3c-44,0-70.7-29.7-96.5-33.3	c-36.1-5.1-71.2,14.4-107.3,9.3c-25.8-3.7-52-33.3-97-33.3V533h1200L1199.9,329.6z" />
-                            <circle class="bubble0" cx="350" cy="400" r="8" />
-                            <circle class="bubble1" cx="320" cy="400" r="6" />
-                            <circle class="bubble2" cx="300" cy="400" r="12" />
-                            <circle class="bubble3" cx="276" cy="400" r="3" />
-                            <circle class="bubble4" cx="244" cy="400" r="4" />
-                            <circle class="bubblePop0" cx="280" cy="400" r="5" />
-                            <circle class="bubblePop1" cx="310" cy="390" r="5" />
-                            <circle class="bubblePop2" cx="350" cy="410" r="5" />
-                        </g>
-                        <g class="darkBubbleGroup" fill="none" stroke="none">
-                            <circle class="darkBubble" cx="310" cy="480" r="7" />
-                            <circle class="darkBubble" cx="360" cy="480" r="5" />
-                            <circle class="darkBubble" cx="230" cy="480" r="6" />
-                            <circle class="darkBubble" cx="345" cy="480" r="3" />
-                            <circle class="darkBubble" cx="290" cy="480" r="8" />
-                            <circle class="darkBubble" cx="320" cy="480" r="2" />
-                            <circle class="darkBubble" cx="260" cy="480" r="9" />
-                        </g>
-                        <path class="pop" fill="none" stroke="none" stroke-width="4" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-miterlimit="10" d="
-             M37.4,9c2.1-2.1,4.2-4.2,6.3-6.3 M2,44.4c2.2-2.2,4.5-4.5,6.7-6.7 M37.4,37.4c2.1,2.1,4.2,4.2,6.3,6.3 M2,2c2.2,2.2,4.5,4.5,6.7,6.7
-             " />
-                    </g>
-
-                    path class="flask" opacity="1" fill="none" stroke="none" stroke-width="10" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-miterlimit="10" d="
-                    M379.2,108.2l-20.5,20.5l0.1,126.3h0.2c39.7,21,66.7,62.9,66.7,111c0,69.4-56.3,125.7-125.7,125.7S174.3,435.4,174.3,366
-                    c0-48.1,27.1-89.9,66.8-111l0.1-126.3l-20.5-20.5"/
-                    <radialGradient id="shine" cx="280" cy="337" r="100" gradientUnits="userSpaceOnUse">
-
-                        <stop offset="0.02" style="stop-color:#fff;stop-opacity:0.2" />
-
-                        <stop offset="1" style="stop-color:#1B52D4;stop-opacity:0.1" />
-                    </radialGradient>
-
-                    <circle opacity="0.9" fill="url(#shine)" stroke="none" stroke-width="0.4957" stroke-miterlimit="10"
-                        cx="300" cy="367" r="100" />
-
-                </svg>
-
-            </div>
-        </div>
-    </div> -->
-    <!------------------end preloader---------------------->
-
     <!-- START NAVBAR -->
     <div class="nav">
         <div class="nav__bottom">
@@ -156,117 +64,6 @@
     </div>
     <!-- END NAVBAR -->
 
-
-    <!-- START SIDENAV -->
-    <div class="sidenav">
-        <div class="close-icon">
-            <svg class="clear-icon">
-                <use xlink:href="./static/images/sprite.svg#icon-clear"></use>
-            </svg>
-        </div>
-
-        <div class="sidenav__logo">
-            <div class="big-logo z-10">
-                <img src="./static/images/tamirmaster-logo.png" alt="">
-            </div>
-        </div>
-
-        <ul class="sidenav__menu">
-            <li class="sidenav__menu-item">
-                <a class="sidenav__link">
-                    صفحه اصلی
-                </a>
-            </li>
-
-            <li class="sidenav__menu-item">
-                <div class="d-flex ai-c jc-sw col-12">
-                    <a class="sidenav__link d-flex ai-c jc-sw">
-                        نمایندگی ها
-
-                        <svg class="down-icon">
-                            <use xlink:href="./static/images/sprite.svg#icon-angle-down"></use>
-                        </svg>
-                    </a>
-
-
-                </div>
-
-                <ul class="sidenav__submenu">
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li class="sidenav__menu-item">
-                <a href="" class="sidenav__link">
-                    مقالات
-                </a>
-                <ul class="sidenav__submenu">
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر
-                        </a>
-                    </li>
-                    <li class="sidenav__submenu-item">
-                        <a class="sidenav__submenu-link">
-                            نمایندگی تعمیر لباسشویی بوش
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="sidenav__menu-item">
-                <a href="./contact.html" class="sidenav__link">
-                    تماس با ما
-                </a>
-            </li>
-
-
-        </ul>
-
-        <div class="sidenav__footer">
-            <div class="sidenav__footer-item">
-                <span>شماره تماس</span>
-                <div class="contact-numbers">
-                    <a class="btn btn--secnodary mt10">09369236420</a>
-
-                    <a class="btn btn--secnodary mt10">09369236420</a>
-                </div>
-            </div>
-
-            <div class="sidenav__footer-item mt10">
-                <div class="email d-flex ai-c">
-                    <span>ایمیل : </span>
-                    <p> anitamir@yahoo.com </p>
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-    <!-- END SIDENAV -->
 
     <section class="home-header">
         <div class="container align-center justify-center">
@@ -485,6 +282,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -504,7 +303,7 @@
                     <div class="comment__wrapper swiper-wrapper">
                         <div class="swiper-slide text-center">
                             <div class="comment__item">
-                                <div class="comment__stars">
+                                <div class="flex">
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
@@ -532,7 +331,7 @@
 
                         <div class="swiper-slide text-center">
                             <div class="comment__item">
-                                <div class="comment__stars">
+                                <div class="flex">
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
@@ -560,7 +359,7 @@
 
                         <div class="swiper-slide text-center">
                             <div class="comment__item">
-                                <div class="comment__stars">
+                                <div class="flex">
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
@@ -588,7 +387,7 @@
 
                         <div class="swiper-slide text-center">
                             <div class="comment__item">
-                                <div class="comment__stars">
+                                <div class="flex">
                                     <svg class="star-icon">
                                         <use xlink:href="./static/images/sprite.svg#icon-star1"></use>
                                     </svg>
@@ -629,24 +428,20 @@
         </div>
 
         <div class="row mt30">
-
-            <!-- کارت ۱ -->
-            <div class="col-xl-6 col-sm-12 mt20">
+            <!-- کارت ۱ - مشتریان راضی -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                               
-                                <div class="flex">
-                                    <div class="levels__number">
-                                        <img src="/static/icons/handyman-icon.svg" alt="Happy Customer Icon" >
+                            <div class="text-center">
+                                <div class="flex flex-column align-center text-center">
+                                    <div class="w-30 h-30 mb15">
+                                        <img class="w-full h-full" src="/static/icons/happy-customer-icon.svg"
+                                            alt="Happy Customer Icon">
                                     </div>
-                                    
-                                    <h3 class="mt10">متخصصان باتجربه</h3>
-
-                                    <p class="levels__text mt10">
-                                        تمامی تکنسین‌های ما دوره‌دیده و باتجربه در زمینه تعمیر تخصصی انواع ماشین
-                                        لباسشویی هستند؛ برندهای ایرانی و خارجی را با دقت بالا در منزل شما تعمیر می‌کنیم.
+                                    <h3 class="mb10">مشتریان راضی</h3>
+                                    <p class="levels__text"
+                                        data-text="بیش از ۱۰۰,۰۰۰ مشتری راضی در سراسر کشور. امتیاز ۴.۸ از ۵ در نظرسنجی‌های مشتریان.">
                                     </p>
                                 </div>
                             </div>
@@ -655,23 +450,20 @@
                 </div>
             </div>
 
-            <!-- کارت ۲ -->
-            <div class="col-xl-6 col-sm-12 mt20">
+            <!-- کارت ۲ - زمان‌بندی انعطاف‌پذیر -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    <i class="icon-flash">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                                <div>
-                                    <h3 class="mt10">سرعت در خدمات</h3>
-                                    <p class="levels__text mt10">
-                                        پس از ثبت درخواست، نزدیک‌ترین تکنسین در سریع‌ترین زمان ممکن به محل شما اعزام
-                                        می‌شود. ما به ارزش وقت شما احترام می‌گذاریم.
+                            <div class="text-center">
+                                <div class="flex flex-column align-center text-center">
+                                    <div class="w-30 h-30 mb15">
+                                        <img class="w-full h-full" src="/static/icons/ico-Calendar_Icon_RGB.svg"
+                                            alt="Calendar Icon">
+                                    </div>
+                                    <h3 class="mb10">زمان‌بندی انعطاف‌پذیر</h3>
+                                    <p class="levels__text"
+                                        data-text="در دسترس ۶ روز هفته در اکثر مناطق. امکان رزرو آنلاین و انتخاب زمان دلخواه.">
                                     </p>
                                 </div>
                             </div>
@@ -680,23 +472,20 @@
                 </div>
             </div>
 
-            <!-- کارت ۳ -->
-            <div class="col-xl-6 col-sm-12 mt20">
+            <!-- کارت ۳ - تکنسین‌های متخصص -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    <i class="icon-user-octagon">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                                <div>
-                                    <h3 class="mt10">گارانتی خدمات</h3>
-                                    <p class="levels__text mt10">
-                                        تمام خدمات تعمیر ماشین لباسشویی توسط تعمیرمستر دارای ضمانت کتبی می‌باشد؛ خیالتان
-                                        از بابت کیفیت و دوام تعمیر راحت باشد.
+                            <div class="text-center">
+                                <div class="flex flex-column align-center text-center">
+                                    <div class="w-30 h-30 mb15">
+                                        <img class="w-full h-full" src="/static/icons/handyman-icon.svg"
+                                            alt="Expert Technician Icon">
+                                    </div>
+                                    <h3 class="mb10">تکنسین‌های متخصص</h3>
+                                    <p class="levels__text"
+                                        data-text="بیش از ۵۰۰ تکنسین آموزش‌دیده با میانگین ۸+ سال تجربه در تعمیر ماشین‌های لباسشویی.">
                                     </p>
                                 </div>
                             </div>
@@ -705,23 +494,20 @@
                 </div>
             </div>
 
-            <!-- کارت ۴ -->
-            <div class="col-xl-6 col-sm-12 mt20">
+            <!-- کارت ۴ - قطعات باکیفیت -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt20">
                 <div class="levels__item">
                     <div class="card">
                         <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    <i class="icon-money-tick">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                                <div>
-                                    <h3 class="mt10">هزینه‌های منصفانه</h3>
-                                    <p class="levels__text mt10">
-                                        ما قبل از شروع تعمیر، هزینه‌ها را شفاف اعلام می‌کنیم و قیمت‌ها کاملاً منصفانه و
-                                        طبق نرخ اتحادیه می‌باشد. بدون هزینه پنهان.
+                            <div class="text-center">
+                                <div class="flex flex-column align-center text-center">
+                                    <div class="w-30 h-30 mb15">
+                                        <img class="w-full h-full" src="/static/icons/shop-parts-icon.svg"
+                                            alt="Quality Parts Icon">
+                                    </div>
+                                    <h3 class="mb10">قطعات باکیفیت</h3>
+                                    <p class="levels__text"
+                                        data-text="تعمیر اکثر برندهای معروف، صرف‌نظر از اینکه دستگاه را از کجا خریده‌اید.">
                                     </p>
                                 </div>
                             </div>
@@ -729,56 +515,10 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- کارت ۵ -->
-            <div class="col-xl-6 col-sm-12 mt20">
-                <div class="levels__item">
-                    <div class="card">
-                        <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    <i class="icon-settings">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                                <div>
-                                    <h3 class="mt10">تعمیر به‌جای تعویض</h3>
-                                    <p class="levels__text mt10">
-                                        هدف ما کاهش هزینه‌های شماست؛ تا جای ممکن، قطعات معیوب را تعمیر می‌کنیم و فقط در
-                                        صورت لزوم اقدام به تعویض می‌نماییم.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- کارت ۶ -->
-            <div class="col-xl-6 col-sm-12 mt20">
-                <div class="levels__item">
-                    <div class="card">
-                        <div class="card__content">
-                            <div class="d-xl-flex flex-xl-center text-center">
-                                <div class="levels__number">
-                                    <i class="icon-star">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                                <div>
-                                    <h3 class="mt10">استفاده از قطعات اصلی</h3>
-                                    <p class="levels__text mt10">
-                                        در صورت نیاز به تعویض قطعه، فقط از قطعات اورجینال و باکیفیت استفاده می‌کنیم تا
-                                        عمر ماشین لباسشویی شما حفظ شود.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center mt30">
+            <p class="levels__text" data-text="وقتی به دنبال &quot;تعمیر ماشین لباسشویی در نزدیکی من&quot; می‌گردید، می‌توانید روی تعمیرمستر حساب کنید تا با خدمات سریع و قابل اعتماد تعمیر ماشین لباسشویی در کنارتان باشد."></p>
         </div>
 
         <section class="home-faq ">
@@ -790,14 +530,8 @@
 
                     <div class="mt10 text-center">
                         <div class="col-xl-12">
-                            <div class="img-fluid img-fluid-medium">
-                                <!-- تصویر دلخواه FAQ -->
-                            </div>
                         </div>
-
                         <div class="row">
-
-                            <!-- سوال ۱ -->
                             <div class="col col-xl-12 col-sm-12">
                                 <div class="card">
                                     <div class="card__content">
@@ -1091,7 +825,6 @@
 
     <script src="static/js/gsap.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Just-validate CDN -->
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.min.js"></script>

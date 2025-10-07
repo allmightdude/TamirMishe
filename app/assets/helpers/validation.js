@@ -2,6 +2,11 @@
 // Make sure to include JustValidate library before this script
 
 const createValidator = (formSelector, rules) => {
+  if (typeof JustValidate === 'undefined') {
+    console.error('JustValidate is not available');
+    return null;
+  }
+  
   const validator = new JustValidate(formSelector);
 
   rules.forEach(({ field, validations }) => {
