@@ -1,6 +1,0 @@
-@mixin radius($radius: 5px) {
-  border-radius: $radius;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}

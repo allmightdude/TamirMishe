@@ -1,0 +1,47 @@
+{
+  "name": "tamir-mishe-nuxt",
+  "version": "1.0.0",
+  "description": "مرکز تخصصی تعمیرات ماشین لباسشویی - Nuxt 3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.9.3",
+    "@pinia/nuxt": "^0.5.1",
+    "@tiptap/extension-highlight": "^3.13.0",
+    "@tiptap/extension-image": "^3.13.0",
+    "@tiptap/extension-link": "^3.13.0",
+    "@tiptap/extension-placeholder": "^3.13.0",
+    "@tiptap/extension-subscript": "^3.13.0",
+    "@tiptap/extension-superscript": "^3.13.0",
+    "@tiptap/extension-text-align": "^3.13.0",
+    "@tiptap/extension-underline": "^3.13.0",
+    "@tiptap/starter-kit": "^3.13.0",
+    "@tiptap/vue-3": "^3.12.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.8.1",
+    "nuxt": "^3.15.1",
+    "pinia": "^2.1.7",
+    "swiper": "^11.2.10",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@iconify-json/ph": "^1.2.2",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^24.10.1",
+    "mongodb-memory-server": "^10.1.4",
+    "sass-embedded": "^1.93.3",
+    "typescript": "^5.7.2",
+    "vue-tsc": "^3.1.5"
+  }
+}

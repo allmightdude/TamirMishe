@@ -1,0 +1,46 @@
+/* IRANYekan Font Face Declarations */
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('/fonts/woff/iranyekanwebregular.woff') format('woff'),
+       url('/fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('/fonts/woff/iranyekanwebmedium.woff') format('woff'),
+       url('/fonts/ttf/iranyekanwebmedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('/fonts/woff/iranyekanwebbold.woff') format('woff'),
+       url('/fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('/fonts/woff/iranyekanwebextrabold.woff') format('woff'),
+       url('/fonts/ttf/iranyekanwebextrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  family: 'IRANYekan';
+  src: url('/fonts/woff/iranyekanwebblack.woff') format('woff'),
+       url('/fonts/ttf/iranyekanwebblack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'IRANYekan', sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-sm shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-current hover:bg-current hover:text-white font-semibold py-2 px-6 rounded-sm transition-all duration-300;
+  }
+  
+  /* Card styles - Reduced padding */
+  .card {
+    @apply bg-white rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden;
+  }
+  
+  .card-content {
+    @apply p-4;
+  }
+  
+  /* Container improvements */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Section spacing */
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  /* Headings - Very heavy and large */
+  .heading-1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-black leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-black leading-tight;
+  }
+  
+  .heading-3 {
+    @apply text-3xl md:text-4xl font-black leading-tight;
+  }
+  
+  .heading-4 {
+    @apply text-2xl md:text-3xl font-bold leading-tight;
+  }
+  
+  /* Text utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+  
+  .ltr {
+    direction: ltr;
+  }
+}
+
