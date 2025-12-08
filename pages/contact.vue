@@ -65,18 +65,17 @@
           </p>
         </div>
 
-        <!-- Two Column Layout -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <!-- Left Column: Contact Info Cards -->
           <div class="space-y-6">
-            <!-- Office Address Card -->
             <div class="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
               <div class="flex items-start gap-6">
                 <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/20">
                   <Icon name="ph:map-pin-fill" class="w-7 h-7 text-white" />
                 </div>
+
                 <div class="flex-grow">
-                  <h3 class="text-base font-black text-gray-900 mb-3">آدرس دفتر</h3>
+                  <h3 class="text-base font-black text-gray-900 mb-3">آدرس </h3>
+
                   <p class="text-base text-gray-600 leading-relaxed">
                     تهران، میدان ونک<br/>
                     خیابان ملاصدرا، پلاک ۳۵۵۶<br/>

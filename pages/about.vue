@@ -75,19 +75,21 @@
           <div class="relative">
             <div class="grid grid-cols-2 gap-4">
               <div class="space-y-4">
-                <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <div class="relative h-64 rounded-md overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/1.jpg" alt="تعمیرات" class="w-full h-full object-cover">
                 </div>
-                <div class="relative h-48 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+
+                <div class="relative h-48 rounded-md overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/howwashipic2.jpg" alt="خدمات" class="w-full h-full object-cover">
                 </div>
               </div>
 
               <div class="space-y-4 pt-12">
-                <div class="relative h-48 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <div class="relative h-48 rounded-md overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/2714870.jpg" alt="تیم" class="w-full h-full object-cover">
                 </div>
-                <div class="relative h-64 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+
+                <div class="relative h-64 rounded-md overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/1.jpg" alt="کیفیت" class="w-full h-full object-cover">
                 </div>
               </div>
@@ -97,6 +99,7 @@
             <div class="absolute -bottom-8 -left-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 shadow-2xl">
               <div class="text-white text-center">
                 <div class="text-4xl font-black mb-1">۱۰+</div>
+                
                 <div class="text-sm">سال تجربه</div>
               </div>
             </div>
@@ -126,8 +129,10 @@
                 <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Icon name="ph:certificate-bold" class="w-6 h-6 text-blue-600" />
                 </div>
+
                 <div>
                   <div class="text-sm font-black text-gray-900">مجوز رسمی</div>
+
                   <div class="text-xs text-gray-500">تایید شده</div>
                 </div>
               </div>
@@ -136,8 +141,10 @@
                 <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Icon name="ph:medal-bold" class="w-6 h-6 text-green-600" />
                 </div>
+
                 <div>
                   <div class="text-sm font-black text-gray-900">تضمین کیفیت</div>
+
                   <div class="text-xs text-gray-500">۱۰۰٪ تضمین</div>
                 </div>
               </div>
@@ -146,8 +153,10 @@
                 <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #eab308">
                   <Icon name="ph:clock-bold" class="w-6 h-6 text-white" />
                 </div>
+
                 <div>
                   <div class="text-sm font-black text-gray-900">پاسخ سریع</div>
+
                   <div class="text-xs text-gray-500">کمتر از ۲ ساعت</div>
                 </div>
               </div>
@@ -156,8 +165,10 @@
                 <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Icon name="ph:shield-check-bold" class="w-6 h-6 text-purple-600" />
                 </div>
+
                 <div>
                   <div class="text-sm font-black text-gray-900">ضمانت کتبی</div>
+
                   <div class="text-xs text-gray-500">۶ ماه</div>
                 </div>
               </div>
@@ -167,11 +178,11 @@
       </div>
     </section>
 
-    <!-- Timeline Section -->
     <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div class="container-custom">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="inline-block px-4 py-2 bg-blue-50 rounded-full mb-4">
+
             <span class="text-sm font-bold text-blue-600">مسیر پیشرفت</span>
           </div>
 
@@ -184,13 +195,12 @@
           </p>
         </div>
 
-        <!-- Interactive Timeline -->
         <div class="relative max-w-5xl mx-auto">
-          <!-- Navigation Arrows -->
+          <!-- Desktop Navigation Arrows -->
           <button 
             @click="prevYear" 
             :disabled="selectedYearIndex === 0"
-            class="absolute -right-4 md:-right-12 top-8 w-12 h-12 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full flex items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-lg"
+            class="hidden md:flex absolute -right-4 md:-right-12 top-8 w-12 h-12 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-lg z-30"
           >
             <Icon name="ph:caret-right-bold" class="w-6 h-6" />
           </button>
@@ -198,49 +208,122 @@
           <button 
             @click="nextYear" 
             :disabled="selectedYearIndex === timeline.length - 1"
-            class="absolute -left-4 md:-left-12 top-8 w-12 h-12 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full flex items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-lg"
+            class="hidden md:flex absolute -left-4 md:-left-12 top-8 w-12 h-12 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-lg z-30"
           >
             <Icon name="ph:caret-left-bold" class="w-6 h-6" />
           </button>
 
-          <!-- Years -->
-          <div class="flex items-center justify-between mb-12 px-4">
-            <button
-              v-for="(item, index) in timeline"
-              :key="index"
-              @click="selectYear(index)"
-              class="flex flex-col items-center gap-2 transition-all duration-300 group"
+          <!-- Mobile Navigation Buttons -->
+          <div class="md:hidden flex justify-center gap-4 mb-6">
+            <button 
+              @click="prevYear" 
+              :disabled="selectedYearIndex === 0"
+              class="w-10 h-10 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full flex items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-md"
             >
-              <!-- Year Badge -->
-              <div 
-                :class="[
-                  'w-16 h-16 rounded-xl flex items-center justify-center font-black text-lg transition-all duration-300 shadow-lg',
-                  selectedYearIndex === index 
-                    ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white scale-110' 
-                    : 'bg-white text-gray-400 hover:text-gray-600'
-                ]"
-              >
-                {{ item.year }}
-              </div>
-
-              <!-- Connection Line -->
-              <div v-if="index < timeline.length - 1" class="hidden md:block absolute top-8 w-20 h-0.5" :style="{ right: `calc(${(index + 1) * (100 / timeline.length)}% - 40px)` }">
-                <div 
-                  class="h-full transition-all duration-500"
-                  :class="index < selectedYearIndex ? 'bg-blue-500' : 'bg-gray-200'"
-                ></div>
-              </div>
-
-              <!-- Dot Indicator -->
-              <div 
-                :class="[
-                  'w-3 h-3 rounded-full transition-all duration-300',
-                  selectedYearIndex === index 
-                    ? 'bg-blue-500 scale-150' 
-                    : 'bg-gray-300'
-                ]"
-              ></div>
+              <Icon name="ph:caret-right-bold" class="w-5 h-5" />
             </button>
+            <button 
+              @click="nextYear" 
+              :disabled="selectedYearIndex === timeline.length - 1"
+              class="w-10 h-10 bg-white hover:bg-blue-50 border-2 border-gray-200 rounded-full flex items-center justify-center text-blue-500 hover:text-blue-600 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-md"
+            >
+              <Icon name="ph:caret-left-bold" class="w-5 h-5" />
+            </button>
+          </div>
+
+          <div class="relative mb-8 md:mb-12">
+            <div class="hidden md:flex items-center px-4">
+              <template v-for="(item, index) in timeline" :key="index">
+                <button
+                  @click="selectYear(index)"
+                  class="flex flex-col items-center gap-2 transition-all duration-300 group flex-shrink-0"
+                >
+                  <div 
+                    :class="[
+                      'w-16 h-16 rounded-xl flex items-center justify-center font-black text-lg transition-all duration-300 relative z-10',
+                      selectedYearIndex === index 
+                        ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white scale-110' 
+                        : 'bg-white text-gray-400 hover:text-gray-600'
+                    ]"
+                  >
+                    {{ item.year }}
+                  </div>
+
+                  <!-- Dot Indicator -->
+                  <div 
+                    :class="[
+                      'w-3 h-3 rounded-full transition-all duration-300 relative z-10',
+                      selectedYearIndex === index 
+                        ? 'bg-blue-500 scale-150' 
+                        : 'bg-gray-300'
+                    ]"
+                  ></div>
+                </button>
+
+                <div 
+                  v-if="index < timeline.length - 1" 
+                  class="flex flex-grow h-0.5 mx-2 relative"
+                >
+                  <div class="absolute inset-0 bg-gray-200"></div>
+                  <div 
+                    :class="[
+                      'absolute inset-0 transition-all duration-500',
+                      index < selectedYearIndex ? 'bg-blue-500' : 'bg-transparent'
+                    ]"
+                  ></div>
+                </div>
+              </template>
+            </div>
+
+            <div 
+              ref="mobileTimelineRef"
+              class="md:hidden overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide" 
+              style="scrollbar-width: none; -ms-overflow-style: none;"
+            >
+              <div class="flex items-center gap-6 min-w-max px-4 mt-4">
+                <template v-for="(item, index) in timeline" :key="index">
+                  <button
+                    :ref="el => { if (el) yearButtonRefs[index] = el }"
+                    @click="selectYear(index)"
+                    class="flex flex-col items-center gap-3 transition-all duration-300 group flex-shrink-0"
+                  >
+                    <div 
+                      :class="[
+                        'w-14 h-14 rounded-xl flex items-center justify-center font-black text-base transition-all duration-300 relative z-10',
+                        selectedYearIndex === index 
+                          ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white scale-110 ring-4 ring-blue-200' 
+                          : 'bg-white text-gray-400 border-2 border-gray-200'
+                      ]"
+                    >
+                      {{ item.year }}
+                    </div>
+
+                    <div 
+                      :class="[
+                        'w-2.5 h-2.5 rounded-full transition-all duration-300 relative z-10',
+                        selectedYearIndex === index 
+                          ? 'bg-blue-500 scale-150 ring-2 ring-blue-200' 
+                          : 'bg-gray-300'
+                      ]"
+                    ></div>
+                  </button>
+
+                  <div 
+                    v-if="index < timeline.length - 1" 
+                    class="w-8 h-0.5 relative flex-shrink-0"
+                  >
+                    <div class="absolute inset-0 bg-gray-200 rounded-full"></div>
+                    <div 
+
+                      :class="[
+                        'absolute inset-0 rounded-full transition-all duration-500',
+                        index < selectedYearIndex ? 'bg-blue-500' : 'bg-transparent'
+                      ]"
+                    ></div>
+                  </div>
+                </template>
+              </div>
+            </div>
           </div>
 
           <!-- Timeline Content Card -->
@@ -253,18 +336,18 @@
             leave-to-class="opacity-0 scale-95 -translate-y-10"
             mode="out-in"
           >
-            <div :key="selectedYearIndex" class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-100">
-              <div class="flex items-start gap-6">
-                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <Icon name="ph:calendar-check-bold" class="w-8 h-8 text-white" />
+            <div :key="selectedYearIndex" class="bg-white rounded-2xl p-6 md:p-12 shadow-2xl border border-gray-100 mx-2 md:mx-0">
+              <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Icon name="ph:calendar-check-bold" class="w-7 h-7 md:w-8 md:h-8 text-white" />
                 </div>
 
-                <div class="flex-grow">
-                  <div class="text-sm font-bold text-blue-500 mb-2">سال {{ timeline[selectedYearIndex].year }}</div>
-                  <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
+                <div class="flex-grow w-full">
+                  <div class="text-xs md:text-sm font-bold text-blue-500 mb-2">سال {{ timeline[selectedYearIndex].year }}</div>
+                  <h3 class="text-xl md:text-3xl font-black text-gray-900 mb-3 md:mb-4 leading-tight">
                     {{ timeline[selectedYearIndex].title }}
                   </h3>
-                  <p class="text-base text-gray-600 leading-relaxed">
+                  <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                     {{ timeline[selectedYearIndex].description }}
                   </p>
                 </div>
@@ -277,10 +360,14 @@
 
     <!-- Stats Section -->
     <section class="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900 text-white relative overflow-hidden">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 40px 40px;"></div>
-      </div>
+      <!-- Background Image -->
+      <div 
+        class="absolute inset-0 opacity-40"
+        style="background-image: url('/images/abstract-minimal-geometric-shape-background-with-gradient-free-vector.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+      ></div>
+      
+      <!-- Gradient Overlay for better text readability -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/75 via-primary-900/75 to-gray-900/75"></div>
 
       <div class="container-custom relative z-10">
         <div class="text-center mb-12">
@@ -290,12 +377,14 @@
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div v-for="stat in stats" :key="stat.label" class="text-center group">
-            <div class="inline-flex w-20 h-20 rounded-2xl items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 shadow-2xl" :style="{ backgroundColor: stat.color }">
+            <div class="inline-flex w-20 h-20 rounded-xl items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 shadow-2xl">
               <Icon :name="stat.icon" class="w-10 h-10 text-white" />
             </div>
+
             <div class="text-4xl md:text-5xl font-black mb-2">
               {{ stat.number }}<span class="text-blue-400">+</span>
             </div>
+
             <p class="text-sm font-semibold text-gray-300">{{ stat.label }}</p>
           </div>
         </div>
@@ -320,9 +409,9 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="(value, index) in values" :key="index" class="group bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
-            <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-all duration-300" :style="{ backgroundColor: value.color }">
-              <Icon :name="value.icon" class="w-8 h-8 text-white" />
+          <div v-for="(value, index) in values" :key="index" class="group p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300">
+            <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-all duration-300">
+              <Icon :name="value.icon" class="w-8 h-8" :style="{ color: value.color }" />
             </div>
 
             <h3 class="text-xl font-black text-gray-900 mb-3">
@@ -338,8 +427,21 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
-      <div class="container-custom">
+    <section class="py-16 md:py-24 bg-gradient-to-r from-blue-500 to-blue-600 text-white relative overflow-hidden">
+      <!-- Pattern Background -->
+      <div 
+        class="absolute inset-0 opacity-25"
+        style="background-image: url('/images/wmremove-transformed-removebg-preview.png'); background-repeat: repeat; background-size: 350px 350px; background-position: 0 0; mix-blend-mode: overlay;"
+      ></div>
+      
+      <div 
+        class="absolute inset-0 opacity-10"
+        style="background-image: url('/images/wmremove-transformed-removebg-preview.png'); background-repeat: repeat; background-size: 500px 500px; background-position: 100px 100px; filter: invert(1); mix-blend-mode: soft-light;"
+      ></div>
+      
+      <div class="absolute inset-0 bg-gradient-to-r from-[#f1c40f]/60 to-[#f1c40f]/80"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl md:text-5xl font-black mb-6">
             آماده شروع همکاری با ما هستید؟
@@ -468,19 +570,62 @@ const values = ref([
   }
 ])
 
+const mobileTimelineRef = ref<HTMLElement | null>(null)
+const yearButtonRefs = ref<Record<number, any>>({})
+
 const selectYear = (index: number) => {
   selectedYearIndex.value = index
+  // Auto-scroll to selected year on mobile
+  nextTick(() => {
+    const button = yearButtonRefs.value[index] as HTMLElement | null
+    const container = mobileTimelineRef.value
+    if (button && container && button instanceof HTMLElement) {
+      const buttonLeft = button.offsetLeft
+      const buttonWidth = button.offsetWidth
+      const containerWidth = container.offsetWidth
+      const scrollLeft = buttonLeft - (containerWidth / 2) + (buttonWidth / 2)
+      
+      container.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      })
+    }
+  })
 }
 
 const nextYear = () => {
   if (selectedYearIndex.value < timeline.value.length - 1) {
     selectedYearIndex.value++
+    nextTick(() => {
+      selectYear(selectedYearIndex.value)
+    })
   }
 }
 
 const prevYear = () => {
   if (selectedYearIndex.value > 0) {
     selectedYearIndex.value--
+    nextTick(() => {
+      selectYear(selectedYearIndex.value)
+    })
   }
 }
 </script>
+
+<style scoped>
+/* Hide scrollbar for mobile timeline */
+.scrollbar-hide {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scrolling for mobile timeline */
+.scrollbar-hide {
+  scroll-behavior: smooth;
+}
+</style>
