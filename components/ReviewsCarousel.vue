@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg p-6 text-white">
+  <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-white shadow-lg">
     <Swiper
       :modules="modules"
       :pagination="{ clickable: true }"
@@ -26,8 +26,10 @@
             class="w-5 h-5 text-yellow-400/30"
           />
         </div>
+
         <p class="text-sm leading-relaxed mb-4 px-4">{{ review.text }}</p>
-        <div class="text-blue-200 font-semibold">{{ review.name }}</div>
+        
+        <div class="text-blue-200 font-semibold mb-6">{{ review.name }}</div>
       </SwiperSlide>
     </Swiper>
   </div>
@@ -62,6 +64,12 @@ const modules = [Pagination, Autoplay]
 :deep(.swiper-pagination-bullet-active) {
   @apply bg-white;
 }
+
+:deep(.swiper-pagination) {
+  margin-top: 10px;
+  position: relative;
+}
+
 </style>
 
 

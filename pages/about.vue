@@ -283,7 +283,7 @@
               <div class="flex items-center gap-6 min-w-max px-4 mt-4">
                 <template v-for="(item, index) in timeline" :key="index">
                   <button
-                    :ref="el => { if (el) yearButtonRefs[index] = el }"
+                    :ref="setYearButtonRef(index)"
                     @click="selectYear(index)"
                     class="flex flex-col items-center gap-3 transition-all duration-300 group flex-shrink-0"
                   >
@@ -571,7 +571,13 @@ const values = ref([
 ])
 
 const mobileTimelineRef = ref<HTMLElement | null>(null)
-const yearButtonRefs = ref<Record<number, any>>({})
+const yearButtonRefs = ref<Record<number, HTMLElement | null>>({})
+
+const setYearButtonRef = (index: number) => (el: Element | ComponentPublicInstance | null) => {
+  if (el instanceof HTMLElement) {
+    yearButtonRefs.value[index] = el
+  }
+}
 
 const selectYear = (index: number) => {
   selectedYearIndex.value = index

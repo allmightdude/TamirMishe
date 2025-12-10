@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- Scroll Progress Indicator -->
     <div
       class="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50"
       style="transform-origin: right center"
@@ -11,7 +10,6 @@
       ></div>
     </div>
 
-    <!-- Hero Section with Image -->
     <section
       v-if="article?.image"
       class="relative h-[60vh] flex items-center justify-center overflow-hidden"
@@ -29,23 +27,25 @@
         <h1 class="text-3xl lg:text-5xl font-black mb-4 leading-tight">
           {{ article?.title || 'مقاله' }}
         </h1>
+
         <p class="text-lg lg:text-xl font-light leading-relaxed max-w-3xl mx-auto">
           {{ article?.subtitle || article?.metaDescription || 'مقالات و راهنمای تعمیرات ماشین لباسشویی' }}
         </p>
       </div>
     </section>
 
-    <!-- Fallback Header if no image -->
     <section
       v-else
       class="contact-us__header relative overflow-hidden"
     >
       <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+
       <div class="container-custom relative z-10 py-16 md:py-24">
         <div class="text-center text-white">
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
             {{ article?.title || 'مقاله' }}
           </h1>
+
           <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
             {{ article?.subtitle || article?.metaDescription || 'مقالات و راهنمای تعمیرات ماشین لباسشویی' }}
           </p>
@@ -53,93 +53,138 @@
       </div>
     </section>
 
-    <!-- Main Content -->
     <section class="bg-gradient-to-b from-gray-50 to-white py-12">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Author and Meta Information -->
-        <div class="flex items-center justify-between mb-8 pb-6 border-b border-gray-200">
-          <div class="flex items-center gap-4">
-            <!-- Author Avatar -->
-            <img
-              v-if="article?.author?.avatar"
-              :src="article.author.avatar"
-              :alt="article.author.fullName"
-              class="w-12 h-12 rounded-full object-cover flex-shrink-0"
-            />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-gray-200">
+              <div class="flex items-center gap-4">
+                <img
+                  v-if="article?.author?.avatar"
+                  :src="article.author.avatar"
+                  :alt="article.author.fullName"
+                  class="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
+                <div
+                  v-else
+                  class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-lg"
+                >
+                  {{ article?.author?.fullName?.charAt(0) || 'ت' }}
+                </div>
+
+                <div class="text-right">
+                  <div class="font-medium text-gray-900">
+                    {{ article?.author?.fullName || 'تعمیرمستر' }}
+                  </div>
+
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <span v-if="article?.publishedAt">
+                      {{ formatDate(article.publishedAt) }}
+                    </span>
+
+                    <span v-else-if="article?.createdAt">
+                      {{ formatDate(article.createdAt) }}
+                    </span>
+
+                    <span v-if="readingTime > 0">•</span>
+
+                    <span v-if="readingTime > 0">خواندن {{ readingTime }} دقیقه</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <button
+                  @click="shareOnLinkedIn"
+                  class="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="اشتراک در LinkedIn"
+                >
+                  <Icon name="mdi:linkedin" class="w-5 h-5" />
+                </button>
+
+                <button
+                  @click="shareOnTwitter"
+                  class="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="اشتراک در Twitter"
+                >
+                  <Icon name="mdi:twitter" class="w-5 h-5" />
+                </button>
+
+                <button
+                  @click="shareOnWhatsApp"
+                  class="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="اشتراک در WhatsApp"
+                >
+                  <Icon name="mdi:whatsapp" class="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            <div v-if="article?.category || (article?.tags && article.tags.length > 0)" class="mb-6">
+              <div v-if="article?.category" class="mb-3">
+                <span class="bg-green-100 text-green-800 text-sm px-4 py-2 rounded-full">
+                  {{ article.category }}
+                </span>
+              </div>
+              
+              <div v-if="article?.tags && article.tags.length > 0" class="flex flex-wrap gap-2">
+                <span
+                  v-for="(tag, index) in article.tags"
+                  :key="index"
+                  class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full"
+                >
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+
             <div
-              v-else
-              class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-lg"
-            >
-              {{ article?.author?.fullName?.charAt(0) || 'ت' }}
+              class="max-w-none text-gray-700 leading-relaxed editor-content mb-12 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-12"
+              v-html="article?.content"
+            ></div>
+          </div>
+
+          <aside class="lg:col-span-1 space-y-6 lg:sticky lg:top-0 self-start">
+            <ReviewsCarousel :reviews="reviews" />
+
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <h4 class="text-xl font-black text-gray-900 mb-4">تعمیرمستر</h4>
+
+              <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                مرکز تخصصی تعمیرات ماشین لباسشویی تعمیرمستر از بهترین و مجرب‌ترین متخصصین تشکیل شده است. همین امر موجب شده است بهترین خدمات به مشتریان ارائه شود.
+              </p>
+
+              <NuxtLink
+                to="/contact"
+                class="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                تماس با ما
+                <Icon name="mdi:arrow-left" class="w-5 h-5 mr-2" />
+              </NuxtLink>
             </div>
 
-            <!-- Author Info -->
-            <div class="text-right">
-              <div class="font-medium text-gray-900">
-                {{ article?.author?.fullName || 'تعمیرمستر' }}
-              </div>
-              <div class="flex items-center gap-2 text-sm text-gray-600">
-                <span v-if="article?.publishedAt">
-                  {{ formatDate(article.publishedAt) }}
-                </span>
-                <span v-else-if="article?.createdAt">
-                  {{ formatDate(article.createdAt) }}
-                </span>
-                <span v-if="readingTime > 0">•</span>
-                <span v-if="readingTime > 0">خواندن {{ readingTime }} دقیقه</span>
-              </div>
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <h4 class="text-xl font-black text-gray-900 mb-6">چرا تعمیرمستر</h4>
+
+              <ul class="space-y-3">
+                <li v-for="(item, index) in whyChooseUs" :key="index">
+                  <NuxtLink
+                    :to="item.link"
+                    class="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors group"
+                  >
+                    <div class="w-8 h-8 rounded-lg bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center transition-colors flex-shrink-0">
+                      <Icon :name="item.icon" class="w-4 h-4 text-blue-600" />
+                    </div>
+
+                    <span class="text-sm font-medium">{{ item.title }}</span>
+
+                    <Icon name="mdi:chevron-left" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 mr-auto transition-colors" />
+                  </NuxtLink>
+                </li>
+              </ul>
             </div>
-          </div>
-
-          <!-- Social Share Buttons -->
-          <div class="flex items-center gap-4">
-            <button
-              @click="shareOnLinkedIn"
-              class="text-gray-400 hover:text-gray-600 transition-colors"
-              title="اشتراک در LinkedIn"
-            >
-              <Icon name="mdi:linkedin" class="w-5 h-5" />
-            </button>
-            <button
-              @click="shareOnTwitter"
-              class="text-gray-400 hover:text-gray-600 transition-colors"
-              title="اشتراک در Twitter"
-            >
-              <Icon name="mdi:twitter" class="w-5 h-5" />
-            </button>
-            <button
-              @click="shareOnWhatsApp"
-              class="text-gray-400 hover:text-gray-600 transition-colors"
-              title="اشتراک در WhatsApp"
-            >
-              <Icon name="mdi:whatsapp" class="w-5 h-5" />
-            </button>
-          </div>
+          </aside>
         </div>
-
-        <!-- Category/Tags -->
-        <div v-if="article?.category || (article?.tags && article.tags.length > 0)" class="mb-6">
-          <div v-if="article?.category" class="mb-3">
-            <span class="bg-green-100 text-green-800 text-sm px-4 py-2 rounded-full">
-              {{ article.category }}
-            </span>
-          </div>
-          <div v-if="article?.tags && article.tags.length > 0" class="flex flex-wrap gap-2">
-            <span
-              v-for="(tag, index) in article.tags"
-              :key="index"
-              class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full"
-            >
-              {{ tag }}
-            </span>
-          </div>
-        </div>
-
-        <!-- Article Content -->
-        <div
-          class="max-w-none text-gray-700 leading-relaxed editor-content mb-12 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-12"
-          v-html="article?.content"
-        ></div>
       </div>
     </section>
   </div>
@@ -148,10 +193,8 @@
 <script setup lang="ts">
 const route = useRoute()
 
-// Make slug reactive
 const slug = computed(() => route.params.slug as string)
 
-// Fetch article with SSR - reactive to route changes
 const { data: articleData, error } = await useAsyncData(
   () => `article-${slug.value}`,
   () => $fetch<{ article: any }>(`/api/articles/${slug.value}`),
@@ -162,7 +205,6 @@ const { data: articleData, error } = await useAsyncData(
 
 const article = computed(() => articleData.value?.article)
 
-// Handle 404
 if (error.value || !article.value) {
   throw createError({
     status: 404,
@@ -170,7 +212,6 @@ if (error.value || !article.value) {
   })
 }
 
-// Scroll progress
 const scrollProgress = ref(0)
 
 const handleScroll = () => {
@@ -190,15 +231,16 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-// Calculate reading time (average 200 words per minute)
 const readingTime = computed(() => {
   if (!article.value?.content) return 0
-  const text = article.value.content.replace(/<[^>]*>/g, '') // Remove HTML tags
+
+  const text = article.value.content.replace(/<[^>]*>/g, '')
+
   const words = text.split(/\s+/).filter((word: string) => word.length > 0).length
+  
   return Math.ceil(words / 200)
 })
 
-// Date formatting
 const { formatDate: formatDateHelper } = useDate()
 const formatDate = (date: string | Date | null | undefined) => {
   if (!date) return ''
@@ -209,7 +251,6 @@ const formatDate = (date: string | Date | null | undefined) => {
   }
 }
 
-// Social sharing functions
 const shareOnLinkedIn = () => {
   const url = encodeURIComponent(window.location.href)
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank')
@@ -227,7 +268,57 @@ const shareOnWhatsApp = () => {
   window.open(`https://wa.me/?text=${text}%20${url}`, '_blank')
 }
 
-// SEO Meta Tags - Using article's SEO fields
+const reviews = ref([
+  {
+    rating: 3,
+    text: 'نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی‌شوم زیرا می‌دانم با چه کسی تماس بگیرم!',
+    name: 'جعفرپناهی'
+  },
+  {
+    rating: 3,
+    text: 'نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی‌شوم زیرا می‌دانم با چه کسی تماس بگیرم!',
+    name: 'جعفرپناهی'
+  },
+  {
+    rating: 3,
+    text: 'نه این که آرزو کنم بیشتر وسایلم خراب شوند، اما اگر این کار را بکنند آنقدر ناراحت نمی‌شوم زیرا می‌دانم با چه کسی تماس بگیرم!',
+    name: 'جعفرپناهی'
+  }
+])
+
+const whyChooseUs = ref([
+  {
+    title: 'کارشناسان واجد شرایط',
+    icon: 'ph:user-check-bold',
+    link: '/about'
+  },
+  {
+    title: 'گارانتی کار و قطعات',
+    icon: 'ph:shield-check-bold',
+    link: '/about'
+  },
+  {
+    title: 'پیش بینی قیمت',
+    icon: 'ph:currency-circle-dollar-bold',
+    link: '/contact'
+  },
+  {
+    title: 'تکنسین های مودب و متحدالشکل',
+    icon: 'ph:users-three-bold',
+    link: '/about'
+  },
+  {
+    title: 'خدمات طبق برنامه شما',
+    icon: 'ph:calendar-check-bold',
+    link: '/contact'
+  },
+  {
+    title: 'در دسترس بودن',
+    icon: 'ph:clock-bold',
+    link: '/contact'
+  }
+])
+
 const config = useRuntimeConfig()
 const baseUrl = config.public?.baseUrl || 'https://tamirmaster.com'
 
@@ -236,18 +327,15 @@ watch(
   (art: any) => {
     if (!art) return
 
-    // Use SEO title if available, otherwise use article title
     const seoTitle = art.seoTitle || art.title
     const fullTitle = `${seoTitle} | تعمیرمستر`
 
-    // Use SEO canonical if available, otherwise use article URL
     const canonical = art.seoCanonical
       ? art.seoCanonical.startsWith('http')
         ? art.seoCanonical
         : `${baseUrl}${art.seoCanonical}`
       : `${baseUrl}/articles/${art.slug}`
 
-    // Use OG image if available, otherwise use article image
     const ogImage = art.seoOgImage
       ? art.seoOgImage.startsWith('http')
         ? art.seoOgImage
@@ -258,7 +346,6 @@ watch(
         : `${baseUrl}${art.image}`
       : null
 
-    // Use OG title/description if available, otherwise fallback to article fields
     const ogTitle = art.seoOgTitle || art.title
     const ogDescription = art.seoOgDescription || art.metaDescription || art.subtitle || ''
 
@@ -334,7 +421,6 @@ watch(
       },
     })
 
-    // Add structured data if available
     const structuredData = art.seoStructuredData || {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -379,7 +465,6 @@ watch(
   @apply text-xl font-black text-gray-900 mt-6 mb-4;
 }
 
-/* Unordered Lists (Bullet Lists) */
 .editor-content :deep(ul) {
   list-style-type: disc !important;
   margin: 1rem 0 !important;
@@ -396,7 +481,6 @@ watch(
   margin-left: 0 !important;
 }
 
-/* Nested unordered lists */
 .editor-content :deep(ul ul) {
   list-style-type: circle;
   margin-top: 0.5rem;
@@ -408,7 +492,6 @@ watch(
   list-style-type: square;
 }
 
-/* Ordered Lists (Numbered Lists) */
 .editor-content :deep(ol) {
   list-style-type: decimal !important;
   margin: 1rem 0 !important;
@@ -425,7 +508,6 @@ watch(
   margin-left: 0 !important;
 }
 
-/* Nested ordered lists */
 .editor-content :deep(ol ol) {
   list-style-type: lower-alpha;
   margin-top: 0.5rem;
@@ -437,7 +519,6 @@ watch(
   list-style-type: lower-roman;
 }
 
-/* Mixed nested lists */
 .editor-content :deep(ul ol),
 .editor-content :deep(ol ul) {
   margin-top: 0.5rem;
